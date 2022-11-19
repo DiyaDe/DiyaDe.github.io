@@ -1,1 +1,29 @@
-#visitor{box-sizing:border-box!important;margin:0!important;font-size:var(--global-font-size);line-height:1.7!important;color:#333!important;height:auto!important}#visitor div p{margin:0!important;text-align:left!important}#visitor div #name{color:#898989!important;display:inline-block!important}#visitor div .num{color:#333!important;letter-spacing:1px;font-weight:700;float:right!important}
+/* 侧边栏访问统计样式 */
+#visitor {
+    box-sizing: border-box !important;
+    margin: 0px !important;
+    font-size: var(--global-font-size);
+    line-height: 1.7 !important;
+    color: rgb(51, 51, 51) !important;
+    height: auto !important;
+}
+
+/* 单一行调整间距 */
+#visitor div p {
+    margin: 0px !important;
+    text-align: left !important;
+}
+
+/* 左侧竖列 */
+#visitor div #name {
+    color: rgb(137, 137, 137) !important;
+    display: inline-block !important;
+}
+
+/* 右侧竖列 */
+#visitor div .num {
+    color: rgb(51, 51, 51) !important;
+    letter-spacing: 1px;
+    font-weight: bold;
+    float: right !important;
+}

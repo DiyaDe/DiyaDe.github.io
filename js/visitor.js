@@ -1,1 +1,38 @@
-fetch("https://api.vvhan.com/api/visitor.info").then((n=>n.json())).then((n=>{let s=document.querySelectorAll("#visitor .content")[0];var a=n.system,p=n.location,i=n.ip,e=n.tq+"&nbsp"+n.high.replace("最低 ","")+"~"+n.high.replace("最高 ",""),t=n.tip,l=n.fl;a="未知操作系统"===a?"移动端":a,p=null===p?"未知":p,i=null===i?"未知":i,e=null===e?"未知":e,t=null===t?"未知":t,l=null===l?"未知":l,s.innerHTML=`<div><p><span id=name>系统</span><span class="num">${a}</span></p></div>\n    <div><p><span id=name>地址</span><span class="num">${p}</span></p></div>\n    <div><p><span id=name>IP地址</span><span class="num">${i}</span></p></div>\n    <div><p><span id=name>天气</span><span class="num">${e}</span></p></div>\n    <div><p><span id=name>风级</span><span class="num">${l}</span></p></div>\n    <div><p><span id=name>温馨提示</span><span class="num">\n        <div style="width:100% !important"><span style="font-weight:bold;display:block;">${t}</span></div>\n    </p></span></div>\n    `})),fetch("https://v6-widget.51.la/v6/JrXFZrzeIc19omCY/quote.js").then((n=>n.text())).then((n=>{let s=["最近活跃访客","今日访问人数","今日访问量","昨日人数","昨日访问量","本月访问量","总访问量"],a=n.match(/(?<=<\/span><span>).*?(?=<\/span><\/p>)/g),p=document.querySelectorAll("#visitor .content")[1];if(void 0!==p)for(let n=0;n<a.length;n++)3!=n&&4!=n&&(p.innerHTML+="<div><p><span id=name>"+s[n]+'</span id=name><span class="num">'+a[n]+"</span></p></div>")}));
+//获取访客信息
+fetch('https://api.vvhan.com/api/visitor.info').then(res => res.json()).then((data) => { //获取访客信息
+    let c = document.querySelectorAll('#visitor .content')[0]
+    var system = data['system']
+    var addr = data['location']
+    var ipaddr = data['ip']
+    var weather = data['tq'] + "&nbsp" + data['high'].replace("最低 ", "") + "~" + data['high'].replace("最高 ", "")
+    var tip = data['tip']
+    var f1 = data['fl']
+    system = system === "未知操作系统" ? "移动端" : system
+    addr = addr === null ? "未知" : addr
+    ipaddr = ipaddr === null ? "未知" : ipaddr
+    weather = weather === null ? "未知" : weather
+    tip = tip === null ? "未知" : tip
+    f1 = f1 === null ? "未知" : f1
+    c.innerHTML = `<div><p><span id=name>系统</span><span class="num">${system}</span></p></div>
+    <div><p><span id=name>地址</span><span class="num">${addr}</span></p></div>
+    <div><p><span id=name>IP地址</span><span class="num">${ipaddr}</span></p></div>
+    <div><p><span id=name>天气</span><span class="num">${weather}</span></p></div>
+    <div><p><span id=name>风级</span><span class="num">${f1}</span></p></div>
+    <div><p><span id=name>温馨提示</span><span class="num">
+        <div style="width:100% !important"><span style="font-weight:bold;display:block;">${tip}</span></div>
+    </p></span></div>
+    `
+});
+
+//获取51la统计
+fetch('https://v6-widget.51.la/v6/JrXFZrzeIc19omCY/quote.js').then(res => res.text()).then((data) => {
+    let title = ['最近活跃访客', '今日访问人数', '今日访问量', '昨日人数', '昨日访问量', '本月访问量', '总访问量']
+    let num = data.match(/(?<=<\/span><span>).*?(?=<\/span><\/p>)/g)
+    let s = document.querySelectorAll('#visitor .content')[1]
+    if (s !== undefined) {
+        for (let i = 0; i < num.length; i++) {
+            if (i == 3 || i == 4) continue;
+            s.innerHTML += '<div><p><span id=name>' + title[i] + '</span id=name><span class="num">' + num[i] + '</span></p></div>'
+        }
+    }
+});
