@@ -130,6 +130,31 @@
     
     
     <entry>
+      <title>PLC编程日记</title>
+      <link href="/posts/a37d.html"/>
+      <url>/posts/a37d.html</url>
+      
+        <content type="html"><![CDATA[<h2 id="PLC基础认识"><a href="#PLC基础认识" class="headerlink" title="PLC基础认识"></a>PLC基础认识</h2><p>plc的型号</p><ol><li>微型：logo</li><li>小型：<ul><li><strong><span class='p red'>S7—200系列</span></strong>，目前官方已经停产，但产品依旧还在工厂当中使用。</li><li><strong><span class='p red'>S7—200 smart</span></strong>，只是针对中国销售，属于是特供了<img src="https://tuku.luomengguo.top/PLC%E7%BC%96%E7%A8%8B%E6%97%A5%E8%AE%B0/0173202D.gif" alt="img" style="zoom:25%;" /></li></ul></li><li>基本控制型Basic：<ul><li><strong><span class='p red'>S7—1200系列</span></strong>，这个是现在工厂中最常用的设备</li></ul></li><li>专业型advanced：<ul><li><strong><span class='p red'>S7—300</span></strong>，已经逐步停产了</li><li><strong><span class='p red'>S7—1500</span></strong>，它是S7—300替代品，也是未来中高端的趋势</li><li><strong><span class='p red'>S7—400</span></strong>，只能在大型项目中看到，因为这个很贵。</li><li><strong><span class='p red'>S7—400H</span></strong>，有冗余站比较复杂，只能在大型项目中看到因为很贵。</li></ul></li></ol><p>前三种是小型plc属于低端产品，第四种是大型plc属于中高端产品。</p><h2 id="S7—1200的特点"><a href="#S7—1200的特点" class="headerlink" title="S7—1200的特点"></a>S7—1200的特点</h2><ol><li><p>S7—1200自带以太网接口</p></li><li><p>自身集成了数字量输入输出→用 <strong><span class='p red'>I / Q</span></strong>表示</p></li><li><p>自带模拟量<strong><span class='p red'>0—10V</span></strong></p></li><li><p>S7—1200型号的几个cpu输入和输出的频率【输入：能够检测的最大速度（使用高速计数器进行检测）。输出：最大输出速度(也就是脉冲频率→通断的作用)】</p><ul><li><p>1211C：没有查到懒得查，产品手册里面应该有。</p></li><li><p>1212C：没有查到懒得查，产品手册里面应该有。</p></li><li><p>1214C：没有查到懒得查，产品手册里面应该有。</p></li><li><p>1215C：没有查到懒得查，产品手册里面应该有。</p></li><li><p>1217C：输入和输出都是1MHZ。</p></li></ul></li><li><p>高扩展性，<strong><span class='p red'>除了1211C没有扩展性</span></strong>，其他型号都有。扩展模块如下</p><ul><li>通信模块→添加在左边，信号模块→添加在右边</li><li>中间可以加入信号板</li><li>储存卡（属于可选设备），作用：第一是储存程序，第二是绑定plc（防止储存卡被盗或者是储存卡里程序与实际设备运行逻辑不符）</li></ul></li><li><p>硬件中的所有端子可拆卸</p></li></ol><h2 id="S7—1200的cpu型号"><a href="#S7—1200的cpu型号" class="headerlink" title="S7—1200的cpu型号"></a>S7—1200的cpu型号</h2><p>1211C，1212C，1214C，1215C，1217C</p><p>根据电源洪河输入输出信号的不同，除了1217C以外每一款分别有三款不同的型号：</p><ol><li>DC/DC/DC：工作电源是直流24V / 直流输入 / 晶体管输出</li><li>AC/DC/RLY：工作电源是交流85—264V / 直流输入 / 继电器输出</li><li>DC/DC/RLY：工作电源是直流24V / 直流输入 / 继电器输出</li></ol><h1 id="暂时先写这么多"><a href="#暂时先写这么多" class="headerlink" title="暂时先写这么多"></a>暂时先写这么多</h1>]]></content>
+      
+      
+      <categories>
+          
+          <category> 专业类 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> plc编程 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>精美壁纸网站</title>
       <link href="/posts/5f82.html"/>
       <url>/posts/5f82.html</url>
@@ -147,31 +172,6 @@
         <tags>
             
             <tag> 精美壁纸 </tag>
-            
-        </tags>
-      
-    </entry>
-    
-    
-    
-    <entry>
-      <title>PLC编程日记</title>
-      <link href="/posts/a37d.html"/>
-      <url>/posts/a37d.html</url>
-      
-        <content type="html"><![CDATA[<h2 id="PLC基础认识"><a href="#PLC基础认识" class="headerlink" title="PLC基础认识"></a>PLC基础认识</h2>]]></content>
-      
-      
-      <categories>
-          
-          <category> 专业类 </category>
-          
-      </categories>
-      
-      
-        <tags>
-            
-            <tag> plc编程 </tag>
             
         </tags>
       
