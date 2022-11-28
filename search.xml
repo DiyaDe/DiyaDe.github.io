@@ -4,6 +4,31 @@
   
     
     <entry>
+      <title>网盘不限速方案</title>
+      <link href="/posts/de76.html"/>
+      <url>/posts/de76.html</url>
+      
+        <content type="html"><![CDATA[<div class="note red icon-padding flat"><i class="note-icon fas fa-fan"></i><p><strong><font size="4">注意本教程是百度网盘不限速的教程</font></strong></p></div><div class="note red icon-padding flat"><i class="note-icon fas fa-fan"></i><p>感谢<strong>软件小妹</strong>和<strong>克隆窝</strong>的作者无私贡献了自己的技术，让我们脱离了百度网盘限速的苦海。我只是推广一下方便他们继续运营下去。</p></div><h2 id="方案一"><a href="#方案一" class="headerlink" title="方案一"></a>方案一</h2><p>到浏览器的扩展里面（不同的浏览器扩展名字都差不多），在扩展里面搜索油猴插件这里防止一下小白吧我用图片教程</p><p>我以Microsoft Edge浏览器为例</p><ol><li><p><img src="https://tuku.luomengguo.top/%E7%BD%91%E7%9B%98%E4%B8%8D%E9%99%90%E9%80%9F/image-20221128192453321.png" alt="image-20221128192453321" style="zoom: 67%;" /></p></li><li><p>有可能出现以下选项，没有的可以跳过</p><p><img src="https://tuku.luomengguo.top/%E7%BD%91%E7%9B%98%E4%B8%8D%E9%99%90%E9%80%9F/image-20221128192712237.png" alt="image-20221128192712237" style="zoom: 80%;" /></p></li><li><p>选择获取扩展</p><p><img src="https://tuku.luomengguo.top/%E7%BD%91%E7%9B%98%E4%B8%8D%E9%99%90%E9%80%9F/image-20221128192759316.png" alt="image-20221128192759316" style="zoom:80%;" /></p></li><li><p>然后搜素<strong>Tampermonkey</strong>安装即可，安装完成后他会自动调转到<strong>Tampermonkey</strong>官网，此时页面可能是停留在首页需要选择<strong>用户脚本</strong></p><p><img src="https://tuku.luomengguo.top/%E7%BD%91%E7%9B%98%E4%B8%8D%E9%99%90%E9%80%9F/image-20221128193935833.png" alt="image-20221128193935833" style="zoom: 40%;" /></p></li><li><p>现在就可以搜索<strong>百度网盘简易下载助手（直链下载复活版）</strong>插件安装即可。</p><p><strong><span class='p red'>注意：需要认真查看作者的教程。</span></strong></p><p><img src="https://tuku.luomengguo.top/%E7%BD%91%E7%9B%98%E4%B8%8D%E9%99%90%E9%80%9F/image-20221128194103797.png" alt="image-20221128194103797" style="zoom:50%;" /></p></li></ol><h2 id="方案二"><a href="#方案二" class="headerlink" title="方案二"></a>方案二</h2><p>此方案不需要下载插件。个人体验网站访问速度过慢</p><ol><li>访问<a href="https://www.kelongwo.com/?aff=141290">克隆窝</a>，此网站需要关注公众号进行登录，才能下载。不过这个也并不麻烦，毕竟这个也是免费的咱也不要有太多的要求。</li></ol><p><img src="https://tuku.luomengguo.top/%E7%BD%91%E7%9B%98%E4%B8%8D%E9%99%90%E9%80%9F/image-20221128195630656.png" alt="image-20221128195630656" style="zoom:50%;" /></p><ol><li><p>这是我解析的文件<strong>推荐选择Motrix软件</strong>下载资源</p><p><a href="https://www.kelongwo.com/download/?path=00019700101000000001/0s11do9lZ1Cb130202110231709315qz/0s11do9lZ1Cb131202110231708372nw/0s11do9lZ1Cb13320220201131952l8u/0s11do9lZ1Cb13320220201134418tcb">下载Motrix</a> 软件设置默认即可。</p><p><img src="https://tuku.luomengguo.top/%E7%BD%91%E7%9B%98%E4%B8%8D%E9%99%90%E9%80%9F/image-20221128200840653.png" alt="image-20221128200840653" style="zoom:50%;" /></p></li></ol>]]></content>
+      
+      
+      <categories>
+          
+          <category> 杂谈教程 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> 网盘 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>PLC扫描周期重点</title>
       <link href="/posts/f785.html"/>
       <url>/posts/f785.html</url>
