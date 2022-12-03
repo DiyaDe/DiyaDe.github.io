@@ -4,6 +4,31 @@
   
     
     <entry>
+      <title>切片range函数用法</title>
+      <link href="/posts/3797.html"/>
+      <url>/posts/3797.html</url>
+      
+        <content type="html"><![CDATA[<h2 id="涉及知识"><a href="#涉及知识" class="headerlink" title="涉及知识"></a>涉及知识</h2><p>在所有程序语言中都是从零开始标记的，如图的列表正向从零开始标记，反向从-1开始标记</p><p><img src="https://tuku.luomengguo.top/range%E5%87%BD%E6%95%B0%E7%94%A8%E6%B3%95/image-20221203204820415.png" alt="image-20221203204820415"></p><h2 id="range语法结构"><a href="#range语法结构" class="headerlink" title="range语法结构"></a>range语法结构</h2><p><strong><font size="4">range(start, stop [,step]) </font></strong></p><ul><li>start指的是计数起始值，默认是 0。</li><li>stop 指的是计数结束值，但不包括 stop。</li><li>step 是步长，默认为 1，不可以为 0 。</li></ul><p>range() 函数需要注意的是</p><ol><li>它表示的是左闭右开区间</li><li>它接收的参数必须是整数，可以是负数，但不能是浮点数等其它类型</li><li>它是不可变的序列类型，可以进行判断元素、查找元素、切片等操作，但不能修改元素</li><li>它是可迭代对象，却不是迭代器。(关于迭代器的问题<psw>因为我也还没有搞懂哟</psw>)</li></ol><p>range() 方法生成一段左闭右开的整数范围。<strong><span class='p red'>这个方法与python中的切片方法一样</span></strong>，python切片方法写法如下</p><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">an=[<span class="number">123</span>,<span class="number">12</span>,<span class="number">45</span>,<span class="number">78</span>,<span class="number">5923</span>,<span class="number">15646</span>,<span class="number">13456</span>,<span class="string">&quot;密码&quot;</span>]</span><br><span class="line"><span class="built_in">print</span>(an[::])<span class="comment">#打印出所有元素</span></span><br><span class="line"><span class="built_in">print</span>(an[<span class="number">0</span>:])<span class="comment">#打印从左到右所有元素</span></span><br><span class="line"><span class="built_in">print</span>(an[<span class="number">0</span>:<span class="number">2</span>]) <span class="comment">#左闭右开（右边边界取不到）</span></span><br><span class="line"><span class="built_in">print</span>(an[::-<span class="number">1</span>]) <span class="comment"># 反转</span></span><br><span class="line"><span class="built_in">print</span>(an[<span class="number">0</span>:<span class="number">9</span>:<span class="number">2</span>])<span class="comment">#以步长为2打印</span></span><br></pre></td></tr></table></figure>]]></content>
+      
+      
+      <categories>
+          
+          <category> 学习记录 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> python </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>纪念江泽民同志</title>
       <link href="/posts/6058.html"/>
       <url>/posts/6058.html</url>
