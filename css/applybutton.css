@@ -1,0 +1,1 @@
+.addBtn button:hover{background:#c93f59;color:#fff}[data-theme=dark] .addBtn button:hover{background:#c93f59}.addBtn{display:flex;justify-content:center;flex-wrap:wrap}.addBtn i{font-size:1.3rem;margin-right:10px}.addBtn button{transtion:.2s;display:flex;margin:5px auto;color:var(--global-bg);padding:15px;border-radius:12px;background:#96c9a5;align-items:center}
