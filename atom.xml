@@ -84,9 +84,9 @@
     
     
     
-    <category term="Tag Plugins" scheme="https://luomengguo.top/tags/Tag-Plugins/"/>
-    
     <category term="Hexo" scheme="https://luomengguo.top/tags/Hexo/"/>
+    
+    <category term="Tag Plugins" scheme="https://luomengguo.top/tags/Tag-Plugins/"/>
     
   </entry>
   
@@ -331,9 +331,9 @@
     <category term="杂谈教程" scheme="https://luomengguo.top/categories/%E6%9D%82%E8%B0%88%E6%95%99%E7%A8%8B/"/>
     
     
-    <category term="Hexo" scheme="https://luomengguo.top/tags/Hexo/"/>
-    
     <category term="butterfly" scheme="https://luomengguo.top/tags/butterfly/"/>
+    
+    <category term="Hexo" scheme="https://luomengguo.top/tags/Hexo/"/>
     
     <category term="图床" scheme="https://luomengguo.top/tags/%E5%9B%BE%E5%BA%8A/"/>
     
