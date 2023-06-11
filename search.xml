@@ -81,9 +81,9 @@
       
         <tags>
             
-            <tag> Hexo </tag>
-            
             <tag> Tag Plugins </tag>
+            
+            <tag> Hexo </tag>
             
         </tags>
       
@@ -226,8 +226,8 @@
     
     <entry>
       <title>RobotStudio延长试用期限记录</title>
-      <link href="/posts/fea.html"/>
-      <url>/posts/fea.html</url>
+      <link href="/posts/fea1.html"/>
+      <url>/posts/fea1.html</url>
       
         <content type="html"><![CDATA[<details class="folding-tag" yellow><summary> 小懒叨叨 </summary>              <div class='content'>              <p>我在安装robotstudio的时候robotstudio只有30天的使用期。过了试用期后使用会受到限制。网上使用修改注册表的方法来延长试用时间。我就做个记录，以免忘记了，懒得在网上找。</p>              </div>            </details><h2 id="安装robotstudio"><a href="#安装robotstudio" class="headerlink" title="安装robotstudio"></a>安装robotstudio</h2><p>这个很简单，傻瓜式安装，无脑下一步就可以了，需要注意的是不要安装在C盘。</p><h2 id="延长试用期限"><a href="#延长试用期限" class="headerlink" title="延长试用期限"></a>延长试用期限</h2><kbd>win</kbd> + <kbd>r</kbd>输入<span class='p red'>regedit</span>，打开注册表，在搜索栏输入<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">计算机\HKEY_LOCAL_MACHINE\SOFTWARE\WOW6432Node\Microsoft\SLP Services</span><br></pre></td></tr></table></figure><p>找到NoLockData文件，然后双击打开，把<strong>数值数据</strong>项滑到最后。更改如图选项。</p><p><img src="https://img01.anheyu.com/useruploads/128/2023/04/09/6432cf85eedbb.png" alt="image-20221221104902618"></p><p>需要注意的是所更改的值是16进制的数字，懂16进制的可以顺便改，不懂的话就按照我图中的数字来改。</p><p>然后点击确定保存即可。</p><h2 id="查看试用期限"><a href="#查看试用期限" class="headerlink" title="查看试用期限"></a>查看试用期限</h2><p>打开软件，找到图中选项。</p><p><img src="https://img01.anheyu.com/useruploads/128/2023/04/09/6432cf8603929.png" alt="image-20221221105344797"></p>]]></content>
       
@@ -343,9 +343,9 @@
       
         <tags>
             
-            <tag> butterfly </tag>
-            
             <tag> Hexo </tag>
+            
+            <tag> butterfly </tag>
             
             <tag> 图床 </tag>
             
@@ -551,9 +551,9 @@
       
         <tags>
             
-            <tag> butterfly </tag>
-            
             <tag> Hexo </tag>
+            
+            <tag> butterfly </tag>
             
         </tags>
       
@@ -648,22 +648,22 @@
     
     
     <entry>
-      <title>分类</title>
-      <link href="/categories/index.html"/>
-      <url>/categories/index.html</url>
+      <title>朋友圈</title>
+      <link href="/fcircle/index.html"/>
+      <url>/fcircle/index.html</url>
       
-        <content type="html"><![CDATA[<style>  #libCategories .card-wrap:hover .card-info:after {    width: 300%;  }</style><link rel="stylesheet" type="text/css" href="https://npm.elemecdn.com/js-heo@1.0.11/3dCard/no3d.css"><div id='libCategories'><div id="lib-cards" class="container"><a href='javascript:void(0);' onClick='pjax.loadUrl("/categories/杂谈教程/")'><card data-image="https://img01.anheyu.com/useruploads/128/2023/04/20/64413db1d36cf.jpg"><h1 slot="header">杂谈教程</h1><p slot="content">好用的东西当然要分享啦！</p></card></a><a href='javascript:void(0);' onClick='pjax.loadUrl("/categories/记录生活/")'><card data-image="https://img01.anheyu.com/useruploads/128/2023/04/21/64425e71683ed.jpg"><h1 slot="header">大学生活</h1><p slot="content">记录大学生活中的点点滴滴。</p></card></a><a href='javascript:void(0);' onClick='pjax.loadUrl("/categories/专业类/")'>  <card data-image="https://img01.anheyu.com/useruploads/128/2023/04/21/64425eae7f720.jpg">    <h1 slot="header">专业类</h1>    <p slot="content">专业类文章。</p>  </card></a><a href='javascript:void(0);' onClick='pjax.loadUrl("/categories/年度总结/")'>  <card data-image="https://img01.anheyu.com/useruploads/128/2023/06/08/64819ec85b0c0.webp">    <h1 slot="header">年度总结</h1>    <p slot="content">人生大事总结。</p>  </card></a></div></div><script src='https://lf6-cdn-tos.bytecdntp.com/cdn/expire-1-M/vue/2.6.14/vue.min.js' data-pjax></script><script type="text/javascript" src="https://npm.elemecdn.com/anzhiyu-theme-static@1.0.7/no3d/no3d.js" data-pjax></script>]]></content>
+        <content type="html"><![CDATA[]]></content>
       
     </entry>
     
     
     
     <entry>
-      <title>朋友圈</title>
-      <link href="/fcircle/index.html"/>
-      <url>/fcircle/index.html</url>
+      <title>分类</title>
+      <link href="/categories/index.html"/>
+      <url>/categories/index.html</url>
       
-        <content type="html"><![CDATA[]]></content>
+        <content type="html"><![CDATA[<style>  #libCategories .card-wrap:hover .card-info:after {    width: 300%;  }</style><link rel="stylesheet" type="text/css" href="https://npm.elemecdn.com/js-heo@1.0.11/3dCard/no3d.css"><div id='libCategories'><div id="lib-cards" class="container"><a href='javascript:void(0);' onClick='pjax.loadUrl("/categories/杂谈教程/")'><card data-image="https://img01.anheyu.com/useruploads/128/2023/04/20/64413db1d36cf.jpg"><h1 slot="header">杂谈教程</h1><p slot="content">好用的东西当然要分享啦！</p></card></a><a href='javascript:void(0);' onClick='pjax.loadUrl("/categories/记录生活/")'><card data-image="https://img01.anheyu.com/useruploads/128/2023/04/21/64425e71683ed.jpg"><h1 slot="header">大学生活</h1><p slot="content">记录大学生活中的点点滴滴。</p></card></a><a href='javascript:void(0);' onClick='pjax.loadUrl("/categories/专业类/")'>  <card data-image="https://img01.anheyu.com/useruploads/128/2023/04/21/64425eae7f720.jpg">    <h1 slot="header">专业类</h1>    <p slot="content">专业类文章。</p>  </card></a><a href='javascript:void(0);' onClick='pjax.loadUrl("/categories/年度总结/")'>  <card data-image="https://img01.anheyu.com/useruploads/128/2023/06/08/64819ec85b0c0.webp">    <h1 slot="header">年度总结</h1>    <p slot="content">人生大事总结。</p>  </card></a></div></div><script src='https://lf6-cdn-tos.bytecdntp.com/cdn/expire-1-M/vue/2.6.14/vue.min.js' data-pjax></script><script type="text/javascript" src="https://npm.elemecdn.com/anzhiyu-theme-static@1.0.7/no3d/no3d.js" data-pjax></script>]]></content>
       
     </entry>
     
@@ -714,9 +714,9 @@
     
     
     <entry>
-      <title>标签</title>
-      <link href="/tags/index.html"/>
-      <url>/tags/index.html</url>
+      <title>电脑壁纸</title>
+      <link href="/pc/index.html"/>
+      <url>/pc/index.html</url>
       
         <content type="html"><![CDATA[]]></content>
       
@@ -725,9 +725,9 @@
     
     
     <entry>
-      <title>电脑壁纸</title>
-      <link href="/pc/index.html"/>
-      <url>/pc/index.html</url>
+      <title>标签</title>
+      <link href="/tags/index.html"/>
+      <url>/tags/index.html</url>
       
         <content type="html"><![CDATA[]]></content>
       

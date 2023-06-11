@@ -97,9 +97,9 @@
     
     
     
-    <category term="Hexo" scheme="https://luomengguo.top/tags/Hexo/"/>
-    
     <category term="Tag Plugins" scheme="https://luomengguo.top/tags/Tag-Plugins/"/>
+    
+    <category term="Hexo" scheme="https://luomengguo.top/tags/Hexo/"/>
     
   </entry>
   
@@ -233,10 +233,10 @@
   
   <entry>
     <title>RobotStudio延长试用期限记录</title>
-    <link href="https://luomengguo.top/posts/fea.html"/>
-    <id>https://luomengguo.top/posts/fea.html</id>
+    <link href="https://luomengguo.top/posts/fea1.html"/>
+    <id>https://luomengguo.top/posts/fea1.html</id>
     <published>2022-12-21T01:48:44.000Z</published>
-    <updated>2023-06-10T05:46:59.674Z</updated>
+    <updated>2023-06-11T00:00:30.915Z</updated>
     
     <content type="html"><![CDATA[<details class="folding-tag" yellow><summary> 小懒叨叨 </summary>              <div class='content'>              <p>我在安装robotstudio的时候robotstudio只有30天的使用期。过了试用期后使用会受到限制。网上使用修改注册表的方法来延长试用时间。我就做个记录，以免忘记了，懒得在网上找。</p>              </div>            </details><h2 id="安装robotstudio"><a href="#安装robotstudio" class="headerlink" title="安装robotstudio"></a>安装robotstudio</h2><p>这个很简单，傻瓜式安装，无脑下一步就可以了，需要注意的是不要安装在C盘。</p><h2 id="延长试用期限"><a href="#延长试用期限" class="headerlink" title="延长试用期限"></a>延长试用期限</h2><kbd>win</kbd> + <kbd>r</kbd>输入<span class='p red'>regedit</span>，打开注册表，在搜索栏输入<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">计算机\HKEY_LOCAL_MACHINE\SOFTWARE\WOW6432Node\Microsoft\SLP Services</span><br></pre></td></tr></table></figure><p>找到NoLockData文件，然后双击打开，把<strong>数值数据</strong>项滑到最后。更改如图选项。</p><p><img src="https://img01.anheyu.com/useruploads/128/2023/04/09/6432cf85eedbb.png" alt="image-20221221104902618"></p><p>需要注意的是所更改的值是16进制的数字，懂16进制的可以顺便改，不懂的话就按照我图中的数字来改。</p><p>然后点击确定保存即可。</p><h2 id="查看试用期限"><a href="#查看试用期限" class="headerlink" title="查看试用期限"></a>查看试用期限</h2><p>打开软件，找到图中选项。</p><p><img src="https://img01.anheyu.com/useruploads/128/2023/04/09/6432cf8603929.png" alt="image-20221221105344797"></p>]]></content>
     
@@ -344,9 +344,9 @@
     <category term="杂谈教程" scheme="https://luomengguo.top/categories/%E6%9D%82%E8%B0%88%E6%95%99%E7%A8%8B/"/>
     
     
-    <category term="butterfly" scheme="https://luomengguo.top/tags/butterfly/"/>
-    
     <category term="Hexo" scheme="https://luomengguo.top/tags/Hexo/"/>
+    
+    <category term="butterfly" scheme="https://luomengguo.top/tags/butterfly/"/>
     
     <category term="图床" scheme="https://luomengguo.top/tags/%E5%9B%BE%E5%BA%8A/"/>
     
