@@ -6,7 +6,7 @@
   <link href="https://luomengguo.top/atom.xml" rel="self"/>
   
   <link href="https://luomengguo.top/"/>
-  <updated>2023-06-10T16:30:41.553Z</updated>
+  <updated>2023-06-11T00:21:57.826Z</updated>
   <id>https://luomengguo.top/</id>
   
   <author>
@@ -17,15 +17,23 @@
   <generator uri="https://hexo.io/">Hexo</generator>
   
   <entry>
-    <title>hexo解决每次上传腾讯服务器需要输入密码的问题</title>
+    <title>解决hexo每次上传腾讯服务器需要输入密码的问题</title>
     <link href="https://luomengguo.top/posts/a50a.html"/>
     <id>https://luomengguo.top/posts/a50a.html</id>
     <published>2023-06-10T16:28:49.000Z</published>
-    <updated>2023-06-10T16:30:41.553Z</updated>
+    <updated>2023-06-11T00:21:57.826Z</updated>
     
     
     
     
+    <category term="杂谈教程" scheme="https://luomengguo.top/categories/%E6%9D%82%E8%B0%88%E6%95%99%E7%A8%8B/"/>
+    
+    
+    <category term="hexo" scheme="https://luomengguo.top/tags/hexo/"/>
+    
+    <category term="腾讯服务器" scheme="https://luomengguo.top/tags/%E8%85%BE%E8%AE%AF%E6%9C%8D%E5%8A%A1%E5%99%A8/"/>
+    
+    <category term="hexo上传服务器" scheme="https://luomengguo.top/tags/hexo%E4%B8%8A%E4%BC%A0%E6%9C%8D%E5%8A%A1%E5%99%A8/"/>
     
   </entry>
   
