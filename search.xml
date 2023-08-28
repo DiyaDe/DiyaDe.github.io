@@ -4,6 +4,31 @@
   
     
     <entry>
+      <title>Python代码打包exe</title>
+      <link href="/posts/ede1.html"/>
+      <url>/posts/ede1.html</url>
+      
+        <content type="html"><![CDATA[<h2 id="集成pyinstaller和nuitka的桌面软件"><a href="#集成pyinstaller和nuitka的桌面软件" class="headerlink" title="集成pyinstaller和nuitka的桌面软件"></a>集成pyinstaller和nuitka的桌面软件</h2><p>老规矩下载链接先奉上：<a href="https://wwsf.lanzouw.com/iXYiG16pg1rc">密码:i7jh</a></p><ol><li>这个软件是由b站作者<code>创猿er</code>开发的，软件集成了pyinstaller和nuitka，可以一键打包成exe，还可以可以选择保留.spec文件，进行高级的定制化操作，比如导入一些库的核心文件，软件的界面如下图所示：</li></ol><p><img src="https://img01.anheyu.com/useruploads/128/2023/08/28/64ec450ea4259.png"></p><ol start="2"><li>更多的功能可以去作者写的文档，<a href="https://www.bilibili.com/read/cv25555686?spm_id_from=333.999.0.0">传送门</a></li></ol><h2 id="auto-py-to-exe"><a href="#auto-py-to-exe" class="headerlink" title="auto-py-to-exe"></a>auto-py-to-exe</h2><ol><li>安装auto-py-to-exe</li></ol><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">pip install auto-py-to-exe</span><br></pre></td></tr></table></figure><ol start="2"><li>安装完成后，在命令行输入<code>auto-py-to-exe</code>，会弹出一个图形化界面，如下图所示：</li></ol><p><img src="https://img01.anheyu.com/useruploads/128/2023/08/28/64ec470fd5d07.png"></p><ol start="3"><li><p>auto-py-to-exe的界面已经支持中文，非常友好，在窗口的右上角有一个按钮可以切换语言，点击按钮后会弹出一个窗口，选择简体中文即可。</p></li><li><p>这里我介绍一下附加文件的使用，附加文件可以将一些文件打包到exe中，比如一些图片，音频，视频等，这样就不用将这些文件和exe文件放在同一个目录下了，这样就可以将exe文件单独放在一个目录下，这样就不会显得那么乱了，还可以将一些库的核心文件打包到exe中，这样就不用担心用户没有安装这些库了，具体操作方法是先判断打包文件是文件夹还是单个文件。再找到要打包文件的位置，就可以了。</p></li></ol><p><img src="https://img01.anheyu.com/useruploads/128/2023/08/28/64ec47f6de8e8.png"></p><h2 id="特殊情况处理办法"><a href="#特殊情况处理办法" class="headerlink" title="特殊情况处理办法"></a>特殊情况处理办法</h2><p>我打包的时候经常会出现缺少核心库文件的情况，我的解决办法是，使用第一种打包方案，再打包时我会保留.spec文件，再这个文件里面进行修改参数</p><pre><code><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br></pre></td><td class="code"><pre><span class="line">    <span class="comment"># -*- mode: python ; coding: utf-8 -*-</span></span><br><span class="line"></span><br><span class="line"></span><br><span class="line">block_cipher = None</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">a = Analysis(</span><br><span class="line">    [<span class="string">&#x27;原神抢码器.py&#x27;</span>],</span><br><span class="line">    pathex=[],</span><br><span class="line">    binaries=[</span><br><span class="line">        (r<span class="string">&#x27;C:\Users\33323\AppData\Local\Programs\Python\Python310\Lib\site-packages\pyzbar\libzbar-64.dll&#x27;</span>, <span class="string">&#x27;pyzbar&#x27;</span>),</span><br><span class="line">        (r<span class="string">&#x27;C:\Users\33323\AppData\Local\Programs\Python\Python310\Lib\site-packages\pyzbar\libiconv.dll&#x27;</span>, <span class="string">&#x27;pyzbar&#x27;</span>)</span><br><span class="line">    ], <span class="comment"># 这里是核心库文件的位置</span></span><br><span class="line">    datas=[], <span class="comment"># 这里是附加文件的位置</span></span><br><span class="line">    hiddenimports=[], <span class="comment"># 这里是隐藏导入的库</span></span><br><span class="line">    hookspath=[],  <span class="comment"># 这里是hook文件的位置</span></span><br><span class="line">    hooksconfig=&#123;&#125;, <span class="comment"># 这里是hook文件的配置</span></span><br><span class="line">    runtime_hooks=[], <span class="comment"># 这里是运行时hook文件的位置</span></span><br><span class="line">    excludes=[], <span class="comment"># 这里是排除的库</span></span><br><span class="line">    win_no_prefer_redirects=False, <span class="comment"># 这里是win_no_prefer_redirects</span></span><br><span class="line">    win_private_assemblies=False,   <span class="comment"># 这里是win_private_assemblies</span></span><br><span class="line">    cipher=block_cipher, <span class="comment"># 这里是加密方式</span></span><br><span class="line">    noarchive=False, <span class="comment"># 这里是noarchive</span></span><br><span class="line">)</span><br><span class="line">pyz = PYZ(a.pure, a.zipped_data, cipher=block_cipher) <span class="comment"># 这里是pyz</span></span><br><span class="line"></span><br><span class="line">exe = EXE(</span><br><span class="line">    pyz, </span><br><span class="line">    a.scripts,  </span><br><span class="line">    a.binaries, </span><br><span class="line">    a.zipfiles, </span><br><span class="line">    a.datas, </span><br><span class="line">    [], </span><br><span class="line">    [],  </span><br><span class="line">    icon=<span class="string">&#x27;原图_200x200.ico&#x27;</span>, <span class="comment"># 这里是图标文件</span></span><br><span class="line">    name=<span class="string">&#x27;原神抢码器&#x27;</span>, <span class="comment"># 这里是exe文件名</span></span><br><span class="line">    debug=False,   </span><br><span class="line">    bootloader_ignore_signals=False,</span><br><span class="line">    strip=False, </span><br><span class="line">    upx=True, </span><br><span class="line">    upx_exclude=[], </span><br><span class="line">    runtime_tmpdir=None,</span><br><span class="line">    console=True,</span><br><span class="line">    disable_windowed_traceback=False,</span><br><span class="line">    argv_emulation=False,</span><br><span class="line">    target_arch=None,</span><br><span class="line">    codesign_identity=None,</span><br><span class="line">    entitlements_file=None,</span><br><span class="line">)</span><br></pre></td></tr></table></figure></code></pre>]]></content>
+      
+      
+      <categories>
+          
+          <category> 学习记录 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> Python </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>解决GitHub上传或连接ssh: connect to host github.com port 22: Connection timed out</title>
       <link href="/posts/dfdd.html"/>
       <url>/posts/dfdd.html</url>
@@ -38,14 +63,14 @@
       
       <categories>
           
-          <category> 杂谈教程 </category>
+          <category> 学习记录 </category>
           
       </categories>
       
       
         <tags>
             
-            <tag> Python实例项目 </tag>
+            <tag> Python </tag>
             
         </tags>
       
@@ -382,7 +407,7 @@
     
     
     <entry>
-      <title>伪病毒</title>
+      <title>恶搞python程序</title>
       <link href="/posts/912e.html"/>
       <url>/posts/912e.html</url>
       
@@ -391,14 +416,14 @@
       
       <categories>
           
-          <category> 杂谈教程 </category>
+          <category> 学习记录 </category>
           
       </categories>
       
       
         <tags>
             
-            <tag> Python实例项目 </tag>
+            <tag> Python </tag>
             
         </tags>
       
@@ -502,9 +527,7 @@
       
         <tags>
             
-            <tag> python </tag>
-            
-            <tag> range函数 </tag>
+            <tag> Python </tag>
             
         </tags>
       
@@ -683,7 +706,7 @@
       
         <tags>
             
-            <tag> python </tag>
+            <tag> Python </tag>
             
         </tags>
       
