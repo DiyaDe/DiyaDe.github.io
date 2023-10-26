@@ -4,6 +4,31 @@
   
     
     <entry>
+      <title>PicGo配置教程(自用)</title>
+      <link href="/posts/b9f4.html"/>
+      <url>/posts/b9f4.html</url>
+      
+        <content type="html"><![CDATA[<h2 id="软件版本"><a href="#软件版本" class="headerlink" title="软件版本"></a>软件版本</h2><p><a href="https://www.aliyundrive.com/s/KAaoaim7kYB">下载PicGo2.3.0</a></p><h2 id="安装插件"><a href="#安装插件" class="headerlink" title="安装插件"></a>安装插件</h2><p>按照图片操作，安装多吉云和兰空图床插件，<strong>picgo-plugin-dogecloud</strong>，<strong>picgo-plugin-lsky</strong><br><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="https://img01.anheyu.com/useruploads/128/2023/10/26/653a2d03b2f89.png" alt="image.png"></p><h2 id="配置多吉云插件-picgo-plugin-dogecloud"><a href="#配置多吉云插件-picgo-plugin-dogecloud" class="headerlink" title="配置多吉云插件 (picgo-plugin-dogecloud)"></a>配置多吉云插件 (picgo-plugin-dogecloud)</h2><table><thead><tr><th align="left">配置项</th><th align="left">说明</th></tr></thead><tbody><tr><td align="left">用户 AccessKey</td><td align="left">详细参考图片<img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="https://img01.anheyu.com/useruploads/128/2023/10/26/653a34cf362b4.png"></td></tr><tr><td align="left">用户 SecretKey</td><td align="left">同上</td></tr><tr><td align="left">s3bucket</td><td align="left"><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="https://img01.anheyu.com/useruploads/128/2023/10/26/653a35615274f.png"></td></tr><tr><td align="left">加速域名</td><td align="left">这个是你解析多吉云的域名，例如：<a href="https://cdn.bimi.com/">https://cdn.bimi.com</a> <img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="https://img01.anheyu.com/useruploads/128/2023/10/26/653a36ac254ab.png"></td></tr><tr><td align="left">上传路径</td><td align="left">mi&#x2F;{year}&#x2F;{month}&#x2F;{fullName}</td></tr><tr><td align="left">自定义后缀</td><td align="left">不是必填项，可以不写</td></tr></tbody></table><h2 id="配置兰空图床-picgo-plugin-lsky"><a href="#配置兰空图床-picgo-plugin-lsky" class="headerlink" title="配置兰空图床 (picgo-plugin-lsky)"></a>配置兰空图床 (picgo-plugin-lsky)</h2><table><thead><tr><th align="left">配置项</th><th align="left">说明</th></tr></thead><tbody><tr><td align="left">服务器域名</td><td align="left"><a href="https://image.anheyu.com/">https://image.anheyu.com</a></td></tr><tr><td align="left">获取的 Token</td><td align="left">‘51 I xxxxxxxxxxxxxxE1 ‘</td></tr></tbody></table><h2 id="搭配-Obsidian-使用"><a href="#搭配-Obsidian-使用" class="headerlink" title="搭配 Obsidian 使用"></a>搭配 Obsidian 使用</h2><p>安装<strong>Image auto upload plugin</strong>插件，什么都不需要修改，只需要保证 PicGo 在后台运行即可。<br><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="https://img01.anheyu.com/useruploads/128/2023/10/26/653a32ee1ae30.png" alt="image.png"></p>]]></content>
+      
+      
+      <categories>
+          
+          <category> 杂谈教程 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> PicGo配置 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>树莓派4B opencv循迹小车开发日志</title>
       <link href="/posts/a0ad.html"/>
       <url>/posts/a0ad.html</url>
