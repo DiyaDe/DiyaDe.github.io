@@ -1,0 +1,760 @@
+<!DOCTYPE html><html lang="zh-CN" data-theme="light"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no"><title>服务器打卡部署文档 | 米粒</title><meta name="keywords" content="部署文档"><meta name="author" content="米粒"><meta name="copyright" content="米粒"><meta name="format-detection" content="telephone=no"><meta name="theme-color" content="#f7f9fe"><meta name="mobile-web-app-capable" content="yes"><meta name="apple-touch-fullscreen" content="yes"><meta name="apple-mobile-web-app-title" content="服务器打卡部署文档"><meta name="application-name" content="服务器打卡部署文档"><meta name="apple-mobile-web-app-capable" content="yes"><meta name="apple-mobile-web-app-status-bar-style" content="#f7f9fe"><meta property="og:type" content="article"><meta property="og:title" content="服务器打卡部署文档"><meta property="og:url" content="https://luomengguo.top/posts/2a9d.html"><meta property="og:site_name" content="米粒"><meta property="og:description" content="文档声明仅供学习交流使用 我们不鼓励、不赞成、不支持任何人，使用任何违规方式完成实习和打卡任务。 同时，鉴于项目的特殊性，开发者可能在任何时间停止更新或删除项目。 更新日志2023-12-24  支持周报选择开关和提交日期。  支持月报选择开关和提交日期。  支持补签选择开关。  支持选择打卡日期。"><meta property="og:locale" content="zh-CN"><meta property="og:image" content="https://cdn.luomengguo.top/mi/2023/12/Desktop%201%20(1).webp"><meta property="article:author" content="米粒"><meta property="article:tag" content="筑梦,米粒的博客,博客,国漫之星,迷恋过去,追逐未来"><meta name="twitter:card" content="summary"><meta name="twitter:image" content="https://cdn.luomengguo.top/mi/2023/12/Desktop%201%20(1).webp"><meta name="description" content="文档声明仅供学习交流使用 我们不鼓励、不赞成、不支持任何人，使用任何违规方式完成实习和打卡任务。 同时，鉴于项目的特殊性，开发者可能在任何时间停止更新或删除项目。 更新日志2023-12-24  支持周报选择开关和提交日期。  支持月报选择开关和提交日期。  支持补签选择开关。  支持选择打卡日期。"><link rel="shortcut icon" href="https://img01.anheyu.com/useruploads/128/2023/06/03/647b2d59b45b3.webp"><link rel="canonical" href="https://luomengguo.top/posts/2a9d"><link rel="preconnect" href="//cdn.cbd.int"/><link rel="preconnect" href="//busuanzi.ibruce.info"/><meta name="google-site-verification" content="xwIcR0Y-OQdbNN5fD2H8v2fF_aI2VRZKZfDbYMOr1hk"/><meta name="baidu-site-verification" content="codeva-dYpte5xuiM"/><meta name="msvalidate.01" content="xxx"/><link rel="stylesheet" href="/css/index.css"><link rel="stylesheet" href="https://cdn.cbd.int/node-snackbar@0.1.16/dist/snackbar.min.css" media="print" onload="this.media='all'"><link rel="stylesheet" href="https://cdn.cbd.int/@fancyapps/ui@5.0.20/dist/fancybox/fancybox.css" media="print" onload="this.media='all'"><script>const GLOBAL_CONFIG = {
+  linkPageTop: {"enable":true,"title":"与数百名博主无限进步","addFriendPlaceholder":"昵称（请勿包含博客等字样）：\n网站地址（要求博客地址，请勿提交个人主页）：\n头像图片url（请提供尽可能清晰的图片，我会上传到我自己的图床）：\n描述：\n站点截图（可选）：\n"},
+  peoplecanvas: {"enable":true,"img":"https://upload-bbs.miyoushe.com/upload/2023/09/03/125766904/ee23df8517f3c3e3efc4145658269c06_5714860933110284659.png"},
+  postHeadAiDescription: {"enable":true,"gptName":"Mili","mode":"tianli","switchBtn":true,"btnLink":"https://afdian.net/item/886a79d4db6711eda42a52540025c377","randomNum":3,"basicWordCount":1500,"key":"puQJ7cPM4hCJFeLxDHYs","Referer":"https://luomengguo.top/"},
+  diytitle: {"enable":true,"leaveTitle":"w(ﾟДﾟ)w 不要走！再看看嘛！","backTitle":"♪(^∇^*)欢迎肥来！"},
+  LA51: {"enable":true,"ck":"JrXFZrzeIc19omCY","LingQueMonitorID":"JrXFZrzeIc19omCY"},
+  greetingBox: {"enable":true,"default":"晚上好👋","list":[{"greeting":"晚安😴","startTime":0,"endTime":5},{"greeting":"早上好鸭👋, 祝你一天好心情！","startTime":6,"endTime":9},{"greeting":"上午好👋, 状态很好，鼓励一下～","startTime":10,"endTime":10},{"greeting":"11点多啦, 在坚持一下就吃饭啦～","startTime":11,"endTime":11},{"greeting":"午安👋, 宝贝","startTime":12,"endTime":14},{"greeting":"🌈充实的一天辛苦啦！","startTime":14,"endTime":18},{"greeting":"19点喽, 奖励一顿丰盛的大餐吧🍔。","startTime":19,"endTime":19},{"greeting":"晚上好👋, 在属于自己的时间好好放松😌~","startTime":20,"endTime":24}]},
+  twikooEnvId: 'https://twikoos.luomengguo.top/',
+  commentBarrageConfig:undefined,
+  root: '/',
+  preloader: {"source":3},
+  friends_vue_info: {"apiurl":"https://fcircle.luomengguo.top/"},
+  navMusic: true,
+  mainTone: {"mode":"cdn","api":"https://img2color-go.vercel.app/api?img=","cover_change":true},
+  authorStatus: {"skills":["🤖️ 数码科技爱好者","🔍 分享与热心帮助","🏠 智能家居小能手","🔨 设计开发一条龙","🤝 专修交互与设计","🏃 脚踏实地行动派","🧱 团队小组发动机","💢 壮汉人狠话不多"]},
+  algolia: {"appId":"RE7Q1R36GF","apiKey":"11c879823564ce9aff2408c795dd2ab3","indexName":"hexo","hits":{"per_page":6},"languages":{"input_placeholder":"输入关键词后按下回车查找","hits_empty":"找不到您查询的内容：${query}","hits_stats":"找到 ${hits} 条结果，用时 ${time} 毫秒"}},
+  localSearch: undefined,
+  translate: {"defaultEncoding":2,"translateDelay":0,"msgToTraditionalChinese":"繁","msgToSimplifiedChinese":"简","rightMenuMsgToTraditionalChinese":"转为繁体","rightMenuMsgToSimplifiedChinese":"转为简体"},
+  noticeOutdate: {"limitDay":365,"position":"top","messagePrev":"距离上次更新已经过去了","messageNext":"天，文章的内容可能已经过时了"},
+  highlight: {"plugin":"highlighjs","highlightCopy":true,"highlightLang":true,"highlightHeightLimit":330},
+  copy: {
+    success: '复制成功',
+    error: '复制错误',
+    noSupport: '浏览器不支持'
+  },
+  relativeDate: {
+    homepage: false,
+    simplehomepage: false,
+    post: false
+  },
+  runtime: '天',
+  date_suffix: {
+    just: '刚刚',
+    min: '分钟前',
+    hour: '小时前',
+    day: '天前',
+    month: '个月前'
+  },
+  copyright: {"copy":true,"copyrightEbable":false,"limitCount":50,"languages":{"author":"作者: 米粒","link":"链接: ","source":"来源: 米粒","info":"著作权归作者所有。商业转载请联系作者获得授权，非商业转载请注明出处。","copySuccess":"复制成功，复制和转载请标注本文地址"}},
+  lightbox: 'fancybox',
+  Snackbar: {"chs_to_cht":"你已切换为繁体","cht_to_chs":"你已切换为简体","day_to_night":"你已切换为深色模式","night_to_day":"你已切换为浅色模式","bgLight":"#425AEF","bgDark":"#1f1f1f","position":"top-center"},
+  source: {
+    justifiedGallery: {
+      js: 'https://cdn.cbd.int/flickr-justified-gallery@2.1.2/dist/fjGallery.min.js',
+      css: 'https://cdn.cbd.int/flickr-justified-gallery@2.1.2/dist/fjGallery.css'
+    }
+  },
+  isPhotoFigcaption: false,
+  islazyload: true,
+  isAnchor: false,
+  shortcutKey: undefined,
+  autoDarkmode: true
+}</script><script id="config-diff">var GLOBAL_CONFIG_SITE = {
+  configTitle: '米粒',
+  title: '服务器打卡部署文档',
+  postAI: 'true',
+  pageFillDescription: '文档声明, 更新日志, 功能介绍, 使用教程, 快速开始, 服务器选择, 服务器系统选择, 设置服务安全, 配置SSH连接服务器, 安装宝塔面板, 配置数据库, 搭建前端, 配置后端, 配置执行定时任务, 配置查验工具文档声明仅供学习交流使用我们不鼓励不赞成不支持任何人使用任何违规方式完成实习和打卡任务同时鉴于项目的特殊性开发者可能在任何时间停止更新或删除项目更新日志支持周报选择开关和提交日期支持月报选择开关和提交日期支持补签选择开关支持选择打卡日期支持打上班和下班卡时间自定义功能介绍本项目支持表单填写验证账号密码是否正确签到默认周日不签到补签支持天内默认开启日报周报月报默认开启补交日报补交周报动态代理不封号使用教程需要填写的内容手机号密码详细地址标准格式为河南省漯河市舞阳县文峰乡贾湖文化广场东南角号附近日报周报补交日报支持天内需要填写开始的日期和结束的日期不能提前提交日报补交周报最多只能补交周快速开始服务器选择大部分阿某里某讯服务器已经被官方封禁不推荐使用建议选择一些其他厂商的服务器这里提供一个我在使用的服务器厂商亿速云如果使用人数比较多建议上高配置服务器系统选择本教程推荐系统版本选择服务厂商的最新版即可设置服务安全这里提供亿速云的操作流程配置连接服务器查看服务器根据自己的电脑系统不是服务器系统下载工具安装好安装宝塔面板后面全部默认输入当看到这个的时候把外网面板地址复制粘贴到浏览器的地址栏中为账号为密码安装推荐套件配置数据库创建数据库推荐名称都用方便后面的操作登录数据库创建数据库表单未签到未提交日报未提交周报后面的代码都是这样操纵的创建数据库定时事件给数据库权限打开工具连接服务器执行下面的指令获取数据库密码输入密码给指定数据库权限如果数据库名称是和我一样的就不用修改不一样的情况需要将改成这个代表你设置的数据库名称当出现的时候就成功了退出数据库回到数据库网页在中执行以下代码如果数据库名称是和我一样的就不用修改不一样的情况需要将改成这个代表你设置的数据库名称未提交日报未提交周报未签到未签到开启事件计划状态创建触发器搭建前端添加站点有域名就提前解析域名这里不做演示不知道可以百度这里提供一个没有域名也可以搭建的方法在域名栏中可以填写已经解析好的域名或者直接写服务器的安装必要插件在搜索栏中搜索管理器将更新到最新版本上传前端文件高德开放平台密钥获取没有账号自己注册一个打开前端文件夹找到文件修改以下参数高德开放平台密钥连接到数据库服务器的地址数据库的用户名数据库密码不是密码数据库名称数据库端口一般默认为上传文件先删除原来文件然后双击解压上传的压缩包运行前端在启动文件栏中找到刚刚上传的文件选择里面的文件路径一般为域名开放端口协议选择需要开放两个端口操作两次一个是前端网页端口一个是数据库端口开启反代目标填写访问网址如果是域名就直接访问域名即可如果是访问格式如下配置后端修改数据库连接参数找到文件修改这个函数的一些参数连接数据库数据库配置服务器的地址数据库的用户名数据库密码不是密码数据库名称数据库端口一般默认为连接数据库并返回连接对象修改代理获取参数找到文件这个是城市区域编码获取代理的注册快代理这个需要实名认证你也可以找不需要的但必须要有国内的同时支持你服务器的调用有的代理是不支持香港服务器调用的你会得到这样的链接找到参数将后面的数字换成然后修改文件下面的代码给快代理添加使用白名单修改文件选改手机号格式错误带有非数字上班打卡时间下班打卡时间补签默认开启日报的开关周报的开关周报提交时间默认每周六月报提交时间默认为每个月号如果需要关闭留空即可删除这两个文字补交日报开关开始日期结束日期补交周报开关补交的周数量修改文件选改可以保持默认日报下次提交时间周报下次提交时间月报下次提交时间上传后端文件双击解压文件解压路径为使用连接工具连接服务器逐条执行下面的指令到执行目录下安装工具当遇到选择的时候全部选择安装必要的库试运行一下没有报错就是好的配置执行定时任务这步执行两次一次是上班卡一次是下班卡执行周期选择每天点和每天点脚本内容配置查验工具在查验工具的文件夹中找到为文件修改数据库参数支持配置多个数据库服务器的地址数据库的用户名数据库密码不是密码数据库名称数据库端口一般默认为服务器的地址数据库的用户名数据库密码不是密码数据库名称数据库端口一般默认为',
+  isPost: true,
+  isHome: false,
+  isHighlightShrink: false,
+  isToc: true,
+  postUpdate: '2024-01-01 12:37:45',
+  postMainColor: '',
+}</script><noscript><style type="text/css">
+  #nav {
+    opacity: 1
+  }
+  .justified-gallery img {
+    opacity: 1
+  }
+
+  #recent-posts time,
+  #post-meta time {
+    display: inline !important
+  }
+</style></noscript><script>(win=>{
+      win.saveToLocal = {
+        set: (key, value, ttl) => {
+          if (ttl === 0) return
+          const now = Date.now()
+          const expiry = now + ttl * 86400000
+          const item = {
+            value,
+            expiry
+          }
+          localStorage.setItem(key, JSON.stringify(item))
+        },
+      
+        get: key => {
+          const itemStr = localStorage.getItem(key)
+      
+          if (!itemStr) {
+            return undefined
+          }
+          const item = JSON.parse(itemStr)
+          const now = Date.now()
+      
+          if (now > item.expiry) {
+            localStorage.removeItem(key)
+            return undefined
+          }
+          return item.value
+        }
+      }
+    
+      win.getScript = (url, attr = {}) => new Promise((resolve, reject) => {
+        const script = document.createElement('script')
+        script.src = url
+        script.async = true
+        script.onerror = reject
+        script.onload = script.onreadystatechange = function() {
+          const loadState = this.readyState
+          if (loadState && loadState !== 'loaded' && loadState !== 'complete') return
+          script.onload = script.onreadystatechange = null
+          resolve()
+        }
+
+        Object.keys(attr).forEach(key => {
+          script.setAttribute(key, attr[key])
+        })
+
+        document.head.appendChild(script)
+      })
+    
+      win.getCSS = (url, id = false) => new Promise((resolve, reject) => {
+        const link = document.createElement('link')
+        link.rel = 'stylesheet'
+        link.href = url
+        if (id) link.id = id
+        link.onerror = reject
+        link.onload = link.onreadystatechange = function() {
+          const loadState = this.readyState
+          if (loadState && loadState !== 'loaded' && loadState !== 'complete') return
+          link.onload = link.onreadystatechange = null
+          resolve()
+        }
+        document.head.appendChild(link)
+      })
+    
+      win.activateDarkMode = () => {
+        document.documentElement.setAttribute('data-theme', 'dark')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#18171d')
+        }
+      }
+      win.activateLightMode = () => {
+        document.documentElement.setAttribute('data-theme', 'light')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#f7f9fe')
+        }
+      }
+      const t = saveToLocal.get('theme')
+    
+          const isDarkMode = window.matchMedia('(prefers-color-scheme: dark)').matches
+          const isLightMode = window.matchMedia('(prefers-color-scheme: light)').matches
+          const isNotSpecified = window.matchMedia('(prefers-color-scheme: no-preference)').matches
+          const hasNoSupport = !isDarkMode && !isLightMode && !isNotSpecified
+
+          if (t === undefined) {
+            if (isLightMode) activateLightMode()
+            else if (isDarkMode) activateDarkMode()
+            else if (isNotSpecified || hasNoSupport) {
+              const now = new Date()
+              const hour = now.getHours()
+              const isNight = hour <= 6 || hour >= 18
+              isNight ? activateDarkMode() : activateLightMode()
+            }
+            window.matchMedia('(prefers-color-scheme: dark)').addListener(e => {
+              if (saveToLocal.get('theme') === undefined) {
+                e.matches ? activateDarkMode() : activateLightMode()
+              }
+            })
+          } else if (t === 'light') activateLightMode()
+          else activateDarkMode()
+        
+      const asideStatus = saveToLocal.get('aside-status')
+      if (asideStatus !== undefined) {
+        if (asideStatus === 'hide') {
+          document.documentElement.classList.add('hide-aside')
+        } else {
+          document.documentElement.classList.remove('hide-aside')
+        }
+      }
+    
+      const detectApple = () => {
+        if(/iPad|iPhone|iPod|Macintosh/.test(navigator.userAgent)){
+          document.documentElement.classList.add('apple')
+        }
+      }
+      detectApple()
+    })(window)</script><link rel="stylesheet" href="https://cdn.luomengguo.top/css/footers.css"><link rel="stylesheet" href="/css/imgloaded.css?1"><link rel="stylesheet" href="/css/newYear.css?1"><meta name="generator" content="Hexo 6.3.0"><link rel="alternate" href="/atom.xml" title="米粒" type="application/atom+xml">
+</head><body data-type="anzhiyu"><div id="web_bg"></div><div id="an_music_bg"></div><div id="loading-box" onclick="document.getElementById(&quot;loading-box&quot;).classList.add(&quot;loaded&quot;)"><div class="loading-bg"><img class="loading-img nolazyload" alt="加载头像" src="https://img01.anheyu.com/useruploads/128/2023/06/03/647b2d3308108.webp"/><div class="loading-image-dot"></div></div></div><script>const preloader = {
+  endLoading: () => {
+    document.getElementById('loading-box').classList.add("loaded");
+  },
+  initLoading: () => {
+    document.getElementById('loading-box').classList.remove("loaded")
+  }
+}
+window.addEventListener('load',()=> { preloader.endLoading() })
+setTimeout(function(){preloader.endLoading();},10000)
+
+if (true) {
+  document.addEventListener('pjax:send', () => { preloader.initLoading() })
+  document.addEventListener('pjax:complete', () => { preloader.endLoading() })
+}</script><link rel="stylesheet" href="https://cdn.cbd.int/anzhiyu-theme-static@1.1.10/progress_bar/progress_bar.css"/><script async="async" src="https://cdn.cbd.int/pace-js@1.2.4/pace.min.js" data-pace-options="{ &quot;restartOnRequestAfter&quot;:false,&quot;eventLag&quot;:false}"></script><div class="post" id="body-wrap"><header class="post-bg" id="page-header"><nav id="nav"><div id="nav-group"><span id="blog_name"><div class="back-home-button"><i class="anzhiyufont anzhiyu-icon-grip-vertical"></i><div class="back-menu-list-groups"><div class="back-menu-list-group"><div class="back-menu-list-title">网页</div><div class="back-menu-list"><a class="back-menu-item" href="https://luomengguo.top/" title="博客"><img class="back-menu-item-icon" src="https://img01.anheyu.com/useruploads/128/2023/06/03/647b2d3308108.webp" alt="博客"/><span class="back-menu-item-text">博客</span></a></div></div><div class="back-menu-list-group"><div class="back-menu-list-title">项目</div><div class="back-menu-list"><a class="back-menu-item" target="_blank" rel="noopener" href="https://image.luomengguo.top" title="米粒图床"><img class="back-menu-item-icon" src="https://image.anheyu.com/favicon.ico" alt="米粒图床"/><span class="back-menu-item-text">米粒图床</span></a></div></div></div></div><a id="site-name" href="/" accesskey="h"><div class="title">米粒</div><i class="anzhiyufont anzhiyu-icon-house-chimney"></i></a></span><div class="mask-name-container"><div id="name-container"><a id="page-name" href="javascript:anzhiyu.scrollToDest(0, 500)">PAGE_NAME</a></div></div><div id="menus"><div class="menus_items"><div class="menus_item"><a class="site-page" href="javascript:void(0);"><span> 文章</span></a><ul class="menus_item_child"><li><a class="site-page child faa-parent animated-hover" href="/archives/"><i class="anzhiyufont anzhiyu-icon-box-archive faa-tada" style="font-size: 0.9em;"></i><span> 隧道</span></a></li><li><a class="site-page child faa-parent animated-hover" href="/categories/"><i class="anzhiyufont anzhiyu-icon-shapes faa-tada" style="font-size: 0.9em;"></i><span> 分类</span></a></li><li><a class="site-page child faa-parent animated-hover" href="/tags/"><i class="anzhiyufont anzhiyu-icon-tags faa-tada" style="font-size: 0.9em;"></i><span> 标签</span></a></li></ul></div><div class="menus_item"><a class="site-page" href="javascript:void(0);"><span> 友链</span></a><ul class="menus_item_child"><li><a class="site-page child faa-parent animated-hover" href="/link/"><i class="anzhiyufont anzhiyu-icon-link faa-tada" style="font-size: 0.9em;"></i><span> 友人帐</span></a></li><li><a class="site-page child faa-parent animated-hover" href="/fcircle/"><i class="anzhiyufont anzhiyu-icon-artstation faa-tada" style="font-size: 0.9em;"></i><span> 朋友圈</span></a></li><li><a class="site-page child faa-parent animated-hover" href="/comments/"><i class="anzhiyufont anzhiyu-icon-envelope faa-tada" style="font-size: 0.9em;"></i><span> 留言板</span></a></li></ul></div><div class="menus_item"><a class="site-page" href="javascript:void(0);"><span> 我的</span></a><ul class="menus_item_child"><li><a class="site-page child faa-parent animated-hover" href="/music/?id=7012261895&amp;server=tencent"><i class="anzhiyufont anzhiyu-icon-music faa-tada" style="font-size: 0.9em;"></i><span> 音乐馆</span></a></li><li><a class="site-page child faa-parent animated-hover" href="/bangumis/"><i class="anzhiyufont anzhiyu-icon-bilibili faa-tada" style="font-size: 0.9em;"></i><span> 追番页</span></a></li><li><a class="site-page child faa-parent animated-hover" href="/album/"><i class="anzhiyufont anzhiyu-icon-images faa-tada" style="font-size: 0.9em;"></i><span> 相册集</span></a></li></ul></div><div class="menus_item"><a class="site-page" href="javascript:void(0);"><span> 关于</span></a><ul class="menus_item_child"><li><a class="site-page child faa-parent animated-hover" href="/about/"><i class="anzhiyufont anzhiyu-icon-paper-plane faa-tada" style="font-size: 0.9em;"></i><span> 关于本人</span></a></li><li><a class="site-page child faa-parent animated-hover" href="/essay/"><i class="anzhiyufont anzhiyu-icon-lightbulb faa-tada" style="font-size: 0.9em;"></i><span> 闲言碎语</span></a></li><li><a class="site-page child faa-parent animated-hover" href="javascript:toRandomPost()"><i class="anzhiyufont anzhiyu-icon-shoe-prints1 faa-tada" style="font-size: 0.9em;"></i><span> 随便逛逛</span></a></li></ul></div></div></div><div id="nav-right"><div class="nav-button only-home" id="travellings_button" title="随机前往一个开往项目网站"><a class="site-page" onclick="anzhiyu.totraveling()" title="随机前往一个开往项目网站" href="javascript:void(0);" rel="external nofollow" data-pjax-state="external"><i class="anzhiyufont anzhiyu-icon-train"></i></a></div><div class="nav-button" id="randomPost_button"><a class="site-page" onclick="toRandomPost()" title="随机前往一个文章" href="javascript:void(0);"><i class="anzhiyufont anzhiyu-icon-dice"></i></a></div><div class="nav-button" id="search-button"><a class="site-page social-icon search" href="javascript:void(0);" title="搜索🔍" accesskey="s"><i class="anzhiyufont anzhiyu-icon-magnifying-glass"></i><span> 搜索</span></a></div><input id="center-console" type="checkbox"/><label class="widget" for="center-console" title="中控台" onclick="anzhiyu.switchConsole();"><i class="left"></i><i class="widget center"></i><i class="widget right"></i></label><div id="console"><div class="console-card-group-reward"><ul class="reward-all console-card"><li class="reward-item"><a href="https://npm.elemecdn.com/anzhiyu-blog@1.1.6/img/post/common/qrcode-weichat.png" target="_blank"><img class="post-qr-code-img" alt="微信" src="https://npm.elemecdn.com/anzhiyu-blog@1.1.6/img/post/common/qrcode-weichat.png"/></a><div class="post-qr-code-desc">微信</div></li><li class="reward-item"><a href="https://npm.elemecdn.com/anzhiyu-blog@1.1.6/img/post/common/qrcode-alipay.png" target="_blank"><img class="post-qr-code-img" alt="支付宝" src="https://npm.elemecdn.com/anzhiyu-blog@1.1.6/img/post/common/qrcode-alipay.png"/></a><div class="post-qr-code-desc">支付宝</div></li></ul></div><div class="console-card-group"><div class="console-card-group-left"><div class="console-card" id="card-newest-comments"><div class="card-content"><div class="author-content-item-tips">互动</div><span class="author-content-item-title"> 最新评论</span></div><div class="aside-list"><span>正在加载中...</span></div></div></div><div class="console-card-group-right"><div class="console-card tags"><div class="card-content"><div class="author-content-item-tips">兴趣点</div><span class="author-content-item-title">寻找你感兴趣的领域</span><div class="card-tags"><div class="item-headline"></div><div class="card-tag-cloud"><a href="/tags/CF%E4%BC%98%E9%80%89IP/" style="font-size: 1.05rem;">CF优选IP<sup>1</sup></a><a href="/tags/ChatGPT/" style="font-size: 1.05rem;">ChatGPT<sup>1</sup></a><a href="/tags/ChatGPT-Plus/" style="font-size: 1.05rem;">ChatGPT Plus<sup>1</sup></a><a href="/tags/C%E8%AF%AD%E8%A8%80/" style="font-size: 1.05rem;">C语言<sup>1</sup></a><a href="/tags/ESP32/" style="font-size: 1.05rem;">ESP32<sup>1</sup></a><a href="/tags/Hexo/" style="font-size: 1.05rem;">Hexo<sup>5</sup></a><a href="/tags/OneTool/" style="font-size: 1.05rem;">OneTool<sup>1</sup></a><a href="/tags/PLC/" style="font-size: 1.05rem;">PLC<sup>1</sup></a><a href="/tags/PicGo%E9%85%8D%E7%BD%AE/" style="font-size: 1.05rem;">PicGo配置<sup>1</sup></a><a href="/tags/Python/" style="font-size: 1.05rem;">Python<sup>5</sup></a><a href="/tags/QQ%EF%BC%8C%E7%BD%91%E6%98%93%E4%BA%91%EF%BC%8CB%E7%AB%99%E4%BB%A3%E6%8C%82%E7%AD%BE%E5%88%B0/" style="font-size: 1.05rem;">QQ，网易云，B站代挂签到<sup>1</sup></a><a href="/tags/RobotStudio/" style="font-size: 1.05rem;">RobotStudio<sup>1</sup></a><a href="/tags/Tag-Plugins/" style="font-size: 1.05rem;">Tag Plugins<sup>1</sup></a><a href="/tags/butterfly/" style="font-size: 1.05rem;">butterfly<sup>2</sup></a><a href="/tags/ssl%E8%AF%81%E4%B9%A6/" style="font-size: 1.05rem;">ssl证书<sup>1</sup></a><a href="/tags/windows/" style="font-size: 1.05rem;">windows<sup>1</sup></a><a href="/tags/%E4%B8%93%E6%9C%AC%E5%A5%97%E8%AF%BB/" style="font-size: 1.05rem;">专本套读<sup>1</sup></a><a href="/tags/%E5%85%AC%E7%9B%8A%E5%B9%BF%E5%91%8A/" style="font-size: 1.05rem;">公益广告<sup>1</sup></a><a href="/tags/%E5%8D%81%E4%B8%83%E5%B1%8A%E6%8C%91%E6%88%98%E6%9D%AF/" style="font-size: 1.05rem;">十七届挑战杯<sup>1</sup></a><a href="/tags/%E5%9B%BE%E5%BA%8A/" style="font-size: 1.05rem;">图床<sup>1</sup></a><a href="/tags/%E5%AD%A6%E4%B9%A0%E9%80%9A/" style="font-size: 1.05rem;">学习通<sup>1</sup></a><a href="/tags/%E5%AE%9D%E5%A1%94%E9%9D%A2%E6%9D%BF/" style="font-size: 1.05rem;">宝塔面板<sup>1</sup></a><a href="/tags/%E5%B7%A5%E4%B8%9A%E6%9C%BA%E5%99%A8%E4%BA%BA/" style="font-size: 1.05rem;">工业机器人<sup>1</sup></a><a href="/tags/%E5%B9%B4%E5%BA%A6%E6%80%BB%E7%BB%93/" style="font-size: 1.05rem;">年度总结<sup>1</sup></a><a href="/tags/%E5%BE%AA%E8%BF%B9%E5%B0%8F%E8%BD%A6/" style="font-size: 1.05rem;">循迹小车<sup>1</sup></a><a href="/tags/%E6%A0%91%E8%8E%93%E6%B4%BE/" style="font-size: 1.05rem;">树莓派<sup>1</sup></a><a href="/tags/%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0/" style="font-size: 1.05rem;">深度学习<sup>1</sup></a><a href="/tags/%E7%94%B5%E8%84%91%E4%BD%BF%E7%94%A8%E5%B0%8F%E6%8A%80%E5%B7%A7/" style="font-size: 1.05rem;">电脑使用小技巧<sup>1</sup></a><a href="/tags/%E7%99%BE%E5%BA%A6%E7%BD%91%E7%9B%98/" style="font-size: 1.05rem;">百度网盘<sup>1</sup></a><a href="/tags/%E7%AB%9E%E8%B5%9B/" style="font-size: 1.05rem;">竞赛<sup>3</sup></a><a href="/tags/%E7%BD%91%E7%9B%98%E4%B8%8D%E9%99%90%E9%80%9F/" style="font-size: 1.05rem;">网盘不限速<sup>1</sup></a><a href="/tags/%E8%A7%A3%E5%86%B3GitHub%E4%B8%8A%E4%BC%A0%E6%88%96%E8%BF%9E%E6%8E%A5%E9%97%AE%E9%A2%98/" style="font-size: 1.05rem;">解决GitHub上传或连接问题<sup>1</sup></a><a href="/tags/%E9%83%A8%E7%BD%B2%E6%96%87%E6%A1%A3/" style="font-size: 1.05rem;">部署文档<sup>1</sup></a><a href="/tags/%E9%83%A8%E7%BD%B2%E6%9C%8D%E5%8A%A1%E5%99%A8/" style="font-size: 1.05rem;">部署服务器<sup>1</sup></a><a href="/tags/%E9%98%BF%E9%87%8C%E4%BA%91/" style="font-size: 1.05rem;">阿里云<sup>1</sup></a><a href="/tags/%E9%A1%B5%E8%84%9A/" style="font-size: 1.05rem;">页脚<sup>1</sup></a></div></div><hr/></div></div><div class="console-card history"><div class="item-headline"><i class="anzhiyufont anzhiyu-icon-box-archiv"></i><span>文章</span></div><div class="card-archives"><div class="item-headline"><i class="anzhiyufont anzhiyu-icon-archive"></i><span>归档</span><a class="card-more-btn" href="/archives/" title="查看更多">
+    <i class="anzhiyufont anzhiyu-icon-angle-right"></i></a></div><ul class="card-archive-list"><li class="card-archive-list-item"><a class="card-archive-list-link" href="/archives/2023/12/"><span class="card-archive-list-date">十二月 2023</span><div class="card-archive-list-count-group"><span class="card-archive-list-count">1</span><span>篇</span></div></a></li><li class="card-archive-list-item"><a class="card-archive-list-link" href="/archives/2023/10/"><span class="card-archive-list-date">十月 2023</span><div class="card-archive-list-count-group"><span class="card-archive-list-count">3</span><span>篇</span></div></a></li><li class="card-archive-list-item"><a class="card-archive-list-link" href="/archives/2023/08/"><span class="card-archive-list-date">八月 2023</span><div class="card-archive-list-count-group"><span class="card-archive-list-count">3</span><span>篇</span></div></a></li><li class="card-archive-list-item"><a class="card-archive-list-link" href="/archives/2023/07/"><span class="card-archive-list-date">七月 2023</span><div class="card-archive-list-count-group"><span class="card-archive-list-count">1</span><span>篇</span></div></a></li><li class="card-archive-list-item"><a class="card-archive-list-link" href="/archives/2023/06/"><span class="card-archive-list-date">六月 2023</span><div class="card-archive-list-count-group"><span class="card-archive-list-count">5</span><span>篇</span></div></a></li><li class="card-archive-list-item"><a class="card-archive-list-link" href="/archives/2023/05/"><span class="card-archive-list-date">五月 2023</span><div class="card-archive-list-count-group"><span class="card-archive-list-count">1</span><span>篇</span></div></a></li><li class="card-archive-list-item"><a class="card-archive-list-link" href="/archives/2023/04/"><span class="card-archive-list-date">四月 2023</span><div class="card-archive-list-count-group"><span class="card-archive-list-count">1</span><span>篇</span></div></a></li><li class="card-archive-list-item"><a class="card-archive-list-link" href="/archives/2023/02/"><span class="card-archive-list-date">二月 2023</span><div class="card-archive-list-count-group"><span class="card-archive-list-count">1</span><span>篇</span></div></a></li></ul></div><hr/></div></div></div><div class="button-group"><div class="console-btn-item"><a class="darkmode_switchbutton" title="显示模式切换" href="javascript:void(0);"><i class="anzhiyufont anzhiyu-icon-moon"></i></a></div><div class="console-btn-item" id="consoleHideAside" onclick="anzhiyu.hideAsideBtn()" title="边栏显示控制"><a class="asideSwitch"><i class="anzhiyufont anzhiyu-icon-arrows-left-right"></i></a></div><div class="console-btn-item" id="consoleMusic" onclick="anzhiyu.musicToggle()" title="音乐开关"><a class="music-switch"><i class="anzhiyufont anzhiyu-icon-music"></i></a></div></div><div class="console-mask" onclick="anzhiyu.hideConsole()" href="javascript:void(0);"></div></div><div class="nav-button" id="nav-totop"><a class="totopbtn" href="javascript:void(0);"><i class="anzhiyufont anzhiyu-icon-arrow-up"></i><span id="percent" onclick="anzhiyu.scrollToDest(0,500)">0</span></a></div><div id="toggle-menu"><a class="site-page" href="javascript:void(0);" title="切换"><i class="anzhiyufont anzhiyu-icon-bars"></i></a></div></div></div></nav><div id="post-info"><div id="post-firstinfo"><div class="meta-firstline"><a class="post-meta-original">原创</a><span class="post-meta-categories"><span class="post-meta-separator"></span><i class="anzhiyufont anzhiyu-icon-inbox post-meta-icon"></i><a class="post-meta-categories" href="/categories/%E6%9D%82%E8%B0%88%E6%95%99%E7%A8%8B/" itemprop="url">杂谈教程</a></span><span class="article-meta tags"><a class="article-meta__tags" href="/tags/%E9%83%A8%E7%BD%B2%E6%96%87%E6%A1%A3/" tabindex="-1" itemprop="url"> <span> <i class="anzhiyufont anzhiyu-icon-hashtag"></i>部署文档</span></a></span></div></div><h1 class="post-title" itemprop="name headline">服务器打卡部署文档</h1><div id="post-meta"><div class="meta-firstline"><span class="post-meta-date"><i class="anzhiyufont anzhiyu-icon-calendar-days post-meta-icon"></i><span class="post-meta-label">发表于</span><time class="post-meta-date-created" itemprop="dateCreated datePublished" datetime="2023-12-16T16:53:27.000Z" title="发表于 2023-12-16 16:53:27">2023-12-16</time><span class="post-meta-separator"></span><i class="anzhiyufont anzhiyu-icon-history post-meta-icon"></i><span class="post-meta-label">更新于</span><time class="post-meta-date-updated" itemprop="dateCreated datePublished" datetime="2024-01-01T12:37:45.187Z" title="更新于 2024-01-01 12:37:45">2024-01-01</time></span></div><div class="meta-secondline"><span class="post-meta-separator"></span><span class="post-meta-wordcount"><i class="anzhiyufont anzhiyu-icon-file-word post-meta-icon" title="文章字数"></i><span class="post-meta-label" title="文章字数">字数总计:</span><span class="word-count" title="文章字数">2.6k</span><span class="post-meta-separator"></span><i class="anzhiyufont anzhiyu-icon-clock post-meta-icon" title="阅读时长"></i><span class="post-meta-label" title="阅读时长">阅读时长:</span><span>10分钟</span></span><span class="post-meta-separator"></span><span class="post-meta-pv-cv" id="" data-flag-title="服务器打卡部署文档"><i class="anzhiyufont anzhiyu-icon-fw-eye post-meta-icon"></i><span class="post-meta-label" title="阅读量">阅读量:</span><span id="busuanzi_value_page_pv"><i class="anzhiyufont anzhiyu-icon-spinner anzhiyu-spin"></i></span></span><span class="post-meta-separator">       </span><span class="post-meta-position" title="作者IP属地为成都"><i class="anzhiyufont anzhiyu-icon-location-dot"></i>成都</span></div></div></div><section class="main-hero-waves-area waves-area"><svg class="waves-svg" xmlns="http://www.w3.org/2000/svg" xlink="http://www.w3.org/1999/xlink" viewBox="0 24 150 28" preserveAspectRatio="none" shape-rendering="auto"><defs><path id="gentle-wave" d="M -160 44 c 30 0 58 -18 88 -18 s 58 18 88 18 s 58 -18 88 -18 s 58 18 88 18 v 44 h -352 Z"></path></defs><g class="parallax"><use href="#gentle-wave" x="48" y="0"></use><use href="#gentle-wave" x="48" y="3"></use><use href="#gentle-wave" x="48" y="5"></use><use href="#gentle-wave" x="48" y="7"></use></g></svg></section><div id="post-top-cover"><img class="nolazyload" id="post-top-bg" src="https://cdn.luomengguo.top/mi/2023/12/Desktop%201%20(1).webp"></div></header><main id="blog-container"><div class="layout" id="content-inner"><div id="post"><div class="post-ai-description"><div class="ai-title"><i class="anzhiyufont anzhiyu-icon-bilibili"></i><div class="ai-title-text">AI-摘要</div><div id="ai-Toggle">切换</div><i class="anzhiyufont anzhiyu-icon-arrow-rotate-right"></i><i class="anzhiyufont anzhiyu-icon-circle-dot" title="朗读摘要"></i><div id="ai-tag">Tianli GPT</div></div><div class="ai-explanation">AI初始化中...</div><div class="ai-btn-box"><div class="ai-btn-item">介绍自己 🙈</div><div class="ai-btn-item">生成本文简介 👋</div><div class="ai-btn-item">推荐相关文章 📖</div><div class="ai-btn-item">前往主页 🏠</div><div class="ai-btn-item" id="go-tianli-blog">前往爱发电购买</div></div><script data-pjax src="/js/anzhiyu/ai_abstract.js"></script></div><article class="post-content" id="article-container" itemscope itemtype="https://luomengguo.top/posts/2a9d.html"><header><a class="post-meta-categories" href="/categories/%E6%9D%82%E8%B0%88%E6%95%99%E7%A8%8B/" itemprop="url">杂谈教程</a><a href="/tags/%E9%83%A8%E7%BD%B2%E6%96%87%E6%A1%A3/" tabindex="-1" itemprop="url">部署文档</a><h1 id="CrawlerTitle" itemprop="name headline">服务器打卡部署文档</h1><span itemprop="author" itemscope itemtype="http://schema.org/Person">米粒</span><time itemprop="dateCreated datePublished" datetime="2023-12-16T16:53:27.000Z" title="发表于 2023-12-16 16:53:27">2023-12-16</time><time itemprop="dateCreated datePublished" datetime="2024-01-01T12:37:45.187Z" title="更新于 2024-01-01 12:37:45">2024-01-01</time></header><h1 id="文档声明"><a href="#文档声明" class="headerlink" title="文档声明"></a>文档声明</h1><p><strong>仅供学习交流使用</strong></p>
+<p><strong>我们不鼓励、不赞成、不支持任何人，使用任何违规方式完成实习和打卡任务。</strong></p>
+<p><strong>同时，鉴于项目的特殊性，开发者可能在任何时间停止更新或删除项目。</strong></p>
+<h1 id="更新日志"><a href="#更新日志" class="headerlink" title="更新日志"></a>更新日志</h1><p><strong>2023-12-24</strong></p>
+<ul>
+<li><p>支持周报选择开关和提交日期。</p>
+</li>
+<li><p>支持月报选择开关和提交日期。</p>
+</li>
+<li><p>支持补签选择开关。</p>
+</li>
+<li><p>支持选择打卡日期。</p>
+</li>
+<li><p>支持打上班和下班卡时间自定义。</p>
+</li>
+</ul>
+<h1 id="功能介绍"><a href="#功能介绍" class="headerlink" title="功能介绍"></a>功能介绍</h1><p>本项目支持</p>
+<ul>
+<li>表单填写验证账号密码是否正确</li>
+<li>签到（默认周日不签到）</li>
+<li>补签（支持30天内，默认开启）</li>
+<li>日报</li>
+<li>周报</li>
+<li>月报（默认开启）</li>
+<li>补交日报</li>
+<li>补交周报</li>
+<li>动态代理IP不封号</li>
+</ul>
+<h1 id="使用教程"><a href="#使用教程" class="headerlink" title="使用教程"></a>使用教程</h1><ol>
+<li><strong>需要填写的内容</strong></li>
+</ol>
+<ul>
+<li>手机号：</li>
+<li>密码:</li>
+<li>详细地址：（标准格式为：河南省 · 漯河市 · 舞阳县 · 文峰乡贾湖文化广场东南角10号（附近））</li>
+<li>日报</li>
+<li>周报</li>
+<li>补交日报（支持30天内，需要填写开始的日期和结束的日期，不能提前提交日报。）</li>
+<li>补交周报（最多只能补交17周）</li>
+</ul>
+<h1 id="快速开始"><a href="#快速开始" class="headerlink" title="快速开始"></a>快速开始</h1><h2 id="服务器选择"><a href="#服务器选择" class="headerlink" title="服务器选择"></a>服务器选择</h2><p>大部分阿某里，某讯服务器 IP 已经被官方封禁。不推荐使用。建议选择一些其他厂商的服务器。这里提供一个我在使用的服务器厂商<a target="_blank" rel="noopener" href="https://www.yisu.com/coupon/?partner=3qMZw">亿速云</a>。如果使用人数比较多，建议上高配置。</p>
+<h2 id="服务器系统选择"><a href="#服务器系统选择" class="headerlink" title="服务器系统选择"></a>服务器系统选择</h2><p>本教程推荐 <strong>Ubuntu</strong>系统，版本选择服务厂商的最新版即可。</p>
+<p><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="https://image.luomengguo.top/mili/2023/12/24/65870c4b965cb.png"></p>
+<h2 id="设置服务安全"><a href="#设置服务安全" class="headerlink" title="设置服务安全"></a>设置服务安全</h2><p>这里提供亿速云的操作流程<br /><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="https://img01.anheyu.com/useruploads/128/2023/12/16/657d709b27fd9.png#id=BXmq4&originHeight=933&originWidth=2555&originalType=binary&ratio=1&rotation=0&showTitle=false&status=done&style=none&title="></p>
+<p><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="https://image.luomengguo.top/mili/2023/12/24/65870c9e7dfe9.png"></p>
+<p><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="https://image.luomengguo.top/mili/2023/12/24/65870ca0eda83.png"></p>
+<p><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="https://image.luomengguo.top/mili/2023/12/24/65870cd0c7182.png"></p>
+<p><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="https://image.luomengguo.top/mili/2023/12/24/65870d25a0c43.png"></p>
+<p><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="https://image.luomengguo.top/mili/2023/12/24/65870d27f116e.png"></p>
+<p><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="https://image.luomengguo.top/mili/2023/12/24/65870d2a4f73a.png" alt="image.png"></p>
+<h2 id="配置SSH连接服务器"><a href="#配置SSH连接服务器" class="headerlink" title="配置SSH连接服务器"></a>配置SSH连接服务器</h2><p>查看服务器ip<br /><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="https://image.luomengguo.top/mili/2023/12/24/65870d2d502b3.png" alt="image.png"><br />根据自己的电脑系统（<strong>不是服务器系统</strong>）下载<a target="_blank" rel="noopener" href="https://www.hostbuf.com/t/988.html">FinalShell</a>工具，安装好。<br /><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="https://image.luomengguo.top/mili/2023/12/24/65870d30350e8.png" alt="image.png"><br /><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="https://image.luomengguo.top/mili/2023/12/24/65870d346765d.png" alt="image.png"></p>
+<h2 id="安装宝塔面板"><a href="#安装宝塔面板" class="headerlink" title="安装宝塔面板"></a>安装宝塔面板</h2><figure class="highlight markdown"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">wget -O install.sh https:#download.bt.cn/install/install-ubuntu<span class="emphasis">_6.0.sh &amp;&amp; sudo bash install.sh ed8484bec</span></span><br></pre></td></tr></table></figure>
+<p>后面全部默认输入<strong>y</strong></p>
+<ol>
+<li>当看到这个的时候，把外网面板地址复制粘贴到浏览器的地址栏中，<strong>username</strong>为账号，<strong>password</strong>为密码</li>
+</ol>
+<p><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="https://image.luomengguo.top/mili/2023/12/24/65870d3a67f72.png" alt="image.png"></p>
+<ol start="2">
+<li>安装推荐套件</li>
+</ol>
+<p><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="https://image.luomengguo.top/mili/2023/12/24/65870d3d1a58a.png" alt="image.png"></p>
+<h2 id="配置数据库"><a href="#配置数据库" class="headerlink" title="配置数据库"></a>配置数据库</h2><ol>
+<li>创建数据库</li>
+</ol>
+<p><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="https://image.luomengguo.top/mili/2023/12/24/65870d9cbd502.png" alt="image.png"><br /><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="https://image.luomengguo.top/mili/2023/12/24/65870d40bd36c.png" alt="image.png"><br /><strong>推荐名称都用gongxueyun方便后面的操作</strong></p>
+<ol start="2">
+<li>登录数据库</li>
+</ol>
+<p><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="https://image.luomengguo.top/mili/2023/12/24/65870d4345ed4.png" alt="image.png"></p>
+<ol start="3">
+<li><p>创建数据库表单</p>
+<figure class="highlight markdown"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br></pre></td><td class="code"><pre><span class="line">CREATE TABLE <span class="code">`users`</span> (</span><br><span class="line">  <span class="code">`phone`</span> varchar(15) NOT NULL,</span><br><span class="line">  <span class="code">`password`</span> varchar(255) NOT NULL,</span><br><span class="line">  <span class="code">`address`</span> varchar(300) NOT NULL,</span><br><span class="line">  <span class="code">`province`</span> varchar(80) NOT NULL,</span><br><span class="line">  <span class="code">`city`</span> varchar(80) NOT NULL,</span><br><span class="line">  <span class="code">`area`</span> varchar(80) NOT NULL,</span><br><span class="line">  <span class="code">`latitude`</span> decimal(10,8) NOT NULL,</span><br><span class="line">  <span class="code">`longitude`</span> decimal(11,8) NOT NULL,</span><br><span class="line">  <span class="code">`bujiao`</span> tinyint(1) DEFAULT NULL,</span><br><span class="line">  <span class="code">`bujiao_start_date`</span> date DEFAULT NULL,</span><br><span class="line">  <span class="code">`bujiao_end_date`</span> date DEFAULT NULL,</span><br><span class="line">  <span class="code">`reedy`</span> tinyint(1) DEFAULT NULL,</span><br><span class="line">  <span class="code">`requirement_week_num`</span> int(11) DEFAULT NULL,</span><br><span class="line">  <span class="code">`token`</span> text,</span><br><span class="line">  <span class="code">`user_id`</span> varchar(255) DEFAULT NULL,</span><br><span class="line">  <span class="code">`days`</span> varchar(225) DEFAULT &#x27;180&#x27;,</span><br><span class="line">  <span class="code">`punch_status`</span> varchar(255) DEFAULT &#x27;未签到&#x27;,</span><br><span class="line">  <span class="code">`registration_date`</span> date DEFAULT NULL,</span><br><span class="line">  <span class="code">`daily_report_status`</span> varchar(255) DEFAULT &#x27;未提交日报&#x27;,</span><br><span class="line">  <span class="code">`weekly_report_status`</span> varchar(255) DEFAULT &#x27;未提交周报&#x27;,</span><br><span class="line">  <span class="code">`zhobao`</span> tinyint(1) DEFAULT NULL,</span><br><span class="line">  <span class="code">`xuanbujiao`</span> tinyint(1) DEFAULT NULL,</span><br><span class="line">  PRIMARY KEY (<span class="code">`phone`</span>)</span><br><span class="line">) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+<p><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="https://image.luomengguo.top/mili/2023/12/24/65870db1ecf31.png" alt="image.png"><br /><strong>后面的SQL代码都是这样操纵的</strong></p>
+</li>
+<li><p>创建数据库定时事件</p>
+</li>
+</ol>
+<ul>
+<li><p>给数据库权限，打开<a target="_blank" rel="noopener" href="https://www.hostbuf.com/t/988.html">FinalShell</a>工具，连接服务器，执行下面的指令。</p>
+<figure class="highlight markdown"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">mysql -u root -p</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>获取数据库root密码。</p>
+</li>
+</ul>
+<p><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="https://image.luomengguo.top/mili/2023/12/24/65870db711e15.png" alt="image.png"></p>
+<ul>
+<li>输入密码</li>
+</ul>
+<p><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="https://image.luomengguo.top/mili/2023/12/24/65870dbdbfc3f.png" alt="image.png"><br /><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="https://image.luomengguo.top/mili/2023/12/24/65870dee648fb.png" alt="image.png"></p>
+<ul>
+<li><p>给指定数据库权限，如果数据库名称是和我一样的就不用修改，不一样的情况需要将 <strong>‘gongxueyun‘@’localhost’</strong> 改成 <strong>‘xxxxx‘@’localhost’。</strong>这个“xxxx”代表你设置的数据库名称。</p>
+<figure class="highlight markdown"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">GRANT SUPER ON <span class="emphasis">*.*</span> TO &#x27;gongxueyun&#x27;@&#x27;localhost&#x27;;</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>当出现 <strong>Query OK, 0 rows affected</strong>的时候就成功了。<strong>CTRL+D</strong>退出数据库</p>
+</li>
+</ul>
+<p><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="https://image.luomengguo.top/mili/2023/12/24/65870df220448.png" alt="image.png"></p>
+<ul>
+<li><p>回到数据库网页，在SQL中执行以下代码。如果数据库名称是和我一样的就不用修改，不一样的情况需要将 <strong>‘gongxueyun‘@’localhost’</strong> 改成 <strong>‘xxxxx‘@’localhost’。</strong>这个“xxxx”代表你设置的数据库名称。</p>
+<figure class="highlight markdown"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br></pre></td><td class="code"><pre><span class="line">DELIMITER $$</span><br><span class="line"></span><br><span class="line">CREATE DEFINER=<span class="code">`gongxueyun`</span>@<span class="code">`localhost`</span> EVENT <span class="code">`ResetDailyReportStatus`</span> </span><br><span class="line">ON SCHEDULE EVERY 1 DAY </span><br><span class="line">STARTS &#x27;2023-12-09 00:00:00&#x27; </span><br><span class="line">ON COMPLETION NOT PRESERVE </span><br><span class="line">ENABLE </span><br><span class="line">DO </span><br><span class="line"><span class="code">    UPDATE users SET daily_report_status = &#x27;未提交日报&#x27;$$</span></span><br><span class="line"><span class="code"></span></span><br><span class="line">CREATE DEFINER=<span class="code">`gongxueyun`</span>@<span class="code">`localhost`</span> EVENT <span class="code">`ResetWeeklyReportStatus`</span> </span><br><span class="line">ON SCHEDULE EVERY 1 WEEK </span><br><span class="line">STARTS &#x27;2023-12-09 02:00:00&#x27; </span><br><span class="line">ON COMPLETION NOT PRESERVE </span><br><span class="line">ENABLE </span><br><span class="line">DO </span><br><span class="line"><span class="code">    IF DAYOFWEEK(CURRENT_DATE) = 2 THEN</span></span><br><span class="line"><span class="code">        UPDATE users SET weekly_report_status = &#x27;未提交周报&#x27;;</span></span><br><span class="line"><span class="code">    END IF$$</span></span><br><span class="line"><span class="code"></span></span><br><span class="line">CREATE DEFINER=<span class="code">`gongxueyun`</span>@<span class="code">`localhost`</span> EVENT <span class="code">`reset_punch_status`</span> </span><br><span class="line">ON SCHEDULE EVERY 1 DAY </span><br><span class="line">STARTS &#x27;2023-12-09 06:00:00&#x27; </span><br><span class="line">ON COMPLETION NOT PRESERVE </span><br><span class="line">ENABLE </span><br><span class="line">DO </span><br><span class="line"><span class="code">    UPDATE users SET punch_status = &#x27;未签到&#x27;$$</span></span><br><span class="line"><span class="code"></span></span><br><span class="line">CREATE DEFINER=<span class="code">`gongxueyun`</span>@<span class="code">`localhost`</span> EVENT <span class="code">`ress`</span> </span><br><span class="line">ON SCHEDULE EVERY 1 DAY </span><br><span class="line">STARTS &#x27;2023-12-09 15:30:00&#x27; </span><br><span class="line">ON COMPLETION NOT PRESERVE </span><br><span class="line">ENABLE </span><br><span class="line">DO </span><br><span class="line"><span class="code">    UPDATE users SET punch_status = &#x27;未签到&#x27;$$</span></span><br><span class="line"><span class="code"></span></span><br><span class="line">DELIMITER ;</span><br><span class="line">COMMIT;</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>开启事件计划状态</p>
+<figure class="highlight markdown"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">SET GLOBAL event<span class="emphasis">_scheduler=&quot;ON&quot;</span></span><br></pre></td></tr></table></figure></li>
+</ul>
+<ol start="5">
+<li>创建触发器<figure class="highlight markdown"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">DELIMITER $$</span><br><span class="line"></span><br><span class="line">CREATE TRIGGER <span class="code">`ruqi`</span> BEFORE INSERT ON <span class="code">`users`</span> </span><br><span class="line">FOR EACH ROW </span><br><span class="line">BEGIN</span><br><span class="line"><span class="code">    SET NEW.registration_date = NOW();</span></span><br><span class="line"><span class="code">END</span></span><br><span class="line"><span class="code">$$</span></span><br><span class="line"><span class="code"></span></span><br><span class="line">DELIMITER ;</span><br></pre></td></tr></table></figure></li>
+</ol>
+<h2 id="搭建前端"><a href="#搭建前端" class="headerlink" title="搭建前端"></a>搭建前端</h2><ol>
+<li>添加站点</li>
+</ol>
+<ul>
+<li>有域名就提前解析域名，这里不做演示，不知道可以百度。这里提供一个没有域名也可以搭建的方法。在域名栏中，可以填写已经解析好的域名或者直接写服务器的IP。</li>
+</ul>
+<p><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="https://image.luomengguo.top/mili/2023/12/24/65870df812d82.png" alt="image.png"></p>
+<ol start="2">
+<li>安装必要插件，在搜索栏中搜索<strong>PM2管理器 。</strong></li>
+</ol>
+<p><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="https://image.luomengguo.top/mili/2023/12/24/65870dfb59c6b.png" alt="image.png"></p>
+<ul>
+<li>将node更新到最新版本。</li>
+</ul>
+<p><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="https://image.luomengguo.top/mili/2023/12/24/65870dfe7d36c.png" alt="image.png"></p>
+<ol start="3">
+<li>上传前端文件。</li>
+</ol>
+<p><a target="_blank" rel="noopener" href="https://lbs.amap.com/">高德开放平台</a>密钥获取。没有账号自己注册一个。<br /><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="https://image.luomengguo.top/mili/2023/12/24/65870e03a7d1c.png" alt="image.png"><br /><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="https://image.luomengguo.top/mili/2023/12/24/65870e0561884.png" alt="image.png"><br /><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="https://image.luomengguo.top/mili/2023/12/24/65870e0b88136.png" alt="image.png"><br /><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="https://image.luomengguo.top/mili/2023/12/24/65870e11901ea.png" alt="image.png"></p>
+<ul>
+<li><p>打开前端文件夹找到<strong>app.js</strong>文件，修改以下参数。</p>
+<figure class="highlight markdown"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">const GAODE<span class="emphasis">_MAPS_</span>API<span class="emphasis">_KEY = &quot;&quot;; //高德开放平台密钥</span></span><br><span class="line"><span class="emphasis"></span></span><br><span class="line"><span class="emphasis"># 连接到 MySQL 数据库</span></span><br><span class="line"><span class="emphasis">const con = mysql.createConnection(&#123;</span></span><br><span class="line"><span class="emphasis">    host: &quot;&quot;, //服务器的IP地址</span></span><br><span class="line"><span class="emphasis">    user: &quot;gongxueyun&quot;, //数据库的用户名</span></span><br><span class="line"><span class="emphasis">    password: &quot;&quot;,//数据库密码（不是root密码）</span></span><br><span class="line"><span class="emphasis">    database: &quot;gongxueyun&quot;, //数据库名称</span></span><br><span class="line"><span class="emphasis">    port: 3306 // 数据库端口一般默认为3306</span></span><br><span class="line"><span class="emphasis">&#125;);</span></span><br></pre></td></tr></table></figure>
+</li>
+<li><p>上传文件。</p>
+</li>
+</ul>
+<p><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="https://image.luomengguo.top/mili/2023/12/24/65870e147d8f5.png" alt="image.png"></p>
+<ul>
+<li>先删除原来index.html文件，然后双击解压上传的压缩包。</li>
+</ul>
+<p><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="https://image.luomengguo.top/mili/2023/12/24/65870e17200f6.png" alt="image.png"></p>
+<ol start="4">
+<li>运行前端</li>
+</ol>
+<p><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="https://image.luomengguo.top/mili/2023/12/24/65870e1a33650.png" alt="image.png"></p>
+<ul>
+<li>在启动文件栏中，找到刚刚上传的文件，选择里面的app.js文件。路径一般为**&#x2F;www&#x2F;wwwroot&#x2F;域名&#x2F;app.js。**</li>
+</ul>
+<p><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="https://image.luomengguo.top/mili/2023/12/24/65870e1c0619a.png" alt="image.png"><br /><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="https://image.luomengguo.top/mili/2023/12/24/65870e21670c9.png" alt="image.png"></p>
+<ol start="5">
+<li>开放端口</li>
+</ol>
+<ul>
+<li>协议选择<strong>TCP&#x2F;UDP，</strong>需要开放两个端口，操作两次。一个是前端网页3000端口，一个是数据库3306端口。</li>
+</ul>
+<p><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="https://image.luomengguo.top/mili/2023/12/24/65870e2cba5c2.png" alt="image.png"></p>
+<ol start="6">
+<li>开启反代</li>
+</ol>
+<p>目标URL填写：<strong><a href="http://127.0.0.1:3000。">http://127.0.0.1:3000。</a></strong><br /><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="https://image.luomengguo.top/mili/2023/12/24/65870e246f086.png" alt="image.png"></p>
+<ol start="7">
+<li>访问网址。</li>
+</ol>
+<p>如果是域名就直接访问域名即可。如果是IP，访问格式如下：</p>
+<figure class="highlight markdown"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">IP:3000  </span><br></pre></td></tr></table></figure>
+
+<h2 id="配置后端"><a href="#配置后端" class="headerlink" title="配置后端"></a>配置后端</h2><ol>
+<li><p>修改数据库连接参数，找到<strong>sql&#x2F;mysql.py</strong>文件。修改<strong>get_db_connection</strong>这个函数的一些参数。</p>
+<figure class="highlight markdown"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="section"># 连接数据库</span></span><br><span class="line">def get<span class="emphasis">_db_</span>connection():</span><br><span class="line"><span class="code">    # 数据库配置</span></span><br><span class="line"><span class="code">    db_config = &#123;</span></span><br><span class="line"><span class="code">        &quot;host&quot;: &quot;&quot;,#服务器的IP地址</span></span><br><span class="line"><span class="code">        &quot;user&quot;: &quot;gongxueyun&quot;, #数据库的用户名</span></span><br><span class="line"><span class="code">        &quot;password&quot;: &quot;&quot;, #数据库密码（不是root密码）</span></span><br><span class="line"><span class="code">        &quot;database&quot;: &quot;gongxueyun&quot;,  #数据库名称</span></span><br><span class="line"><span class="code">        &quot;port&quot;: 3306 # 数据库端口一般默认为3306</span></span><br><span class="line"><span class="code">        &#125;</span></span><br><span class="line"><span class="code">    # 连接数据库并返回连接对象</span></span><br><span class="line"><span class="code">    connection = mysql.connector.connect(**db_config)</span></span><br><span class="line"><span class="code">    return connection, connection.cursor(dictionary=True)</span></span><br></pre></td></tr></table></figure>
+</li>
+<li><p>修改代理获取参数，找到<strong>IP&#x2F;IP.py</strong>文件。</p>
+<figure class="highlight markdown"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">json<span class="emphasis">_file_</span>path = &#x27;.\henan<span class="emphasis">_area_</span>codes.json&#x27; #这个是城市区域编码</span><br></pre></td></tr></table></figure></li>
+</ol>
+<ul>
+<li>获取代理IP的api。注册<a target="_blank" rel="noopener" href="https://www.kuaidaili.com/">快代理</a>，这个需要实名认证，你也可以找不需要的，但必须要有国内的IP同时支持你服务器IP的调用。有的代理是不支持香港服务器调用的。</li>
+</ul>
+<p><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="https://image.luomengguo.top/mili/2023/12/24/65870e329d115.png" alt="image.png"><br /><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="https://image.luomengguo.top/mili/2023/12/24/65870e3bc8396.png" alt="26fa3ea3e78fcbcbe880b4f75a61a62.png"><br />你会得到这样的链接</p>
+<figure class="highlight markdown"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">https:#dps.kdlapi.com/api/getdps/?secret<span class="emphasis">_id=xxxxx&amp;num=1&amp;signature=xxxxxxxx&amp;area=410102&amp;pt=1&amp;format=json&amp;sep=1</span></span><br></pre></td></tr></table></figure>
+<p>找到<strong>area</strong>参数，将后面的数字换成 **{district_code}**。然后修改 <strong>IP&#x2F;IP.py</strong> 文件下面的代码。</p>
+<figure class="highlight markdown"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">district<span class="emphasis">_url = f&quot;https:#dps.kdlapi.com/api/getdps/?secret_</span>id=xxxxx&amp;num=1&amp;signature=xxxxxxxx&amp;area=&#123;district<span class="emphasis">_code&#125;&amp;pt=1&amp;format=json&amp;sep=1&quot;</span></span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>给快代理添加API使用白名单。</li>
+</ul>
+<p><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="https://image.luomengguo.top/mili/2023/12/24/65870e3f61dcd.png" alt="image.png"></p>
+<ol start="3">
+<li><p>修改<strong>config&#x2F;info.py</strong>文件（选改）</p>
+<figure class="highlight markdown"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br></pre></td><td class="code"><pre><span class="line">def <span class="strong">__init__</span>(self, login<span class="emphasis">_info, path):</span></span><br><span class="line"><span class="emphasis">    self.password = login_</span>info.get(&quot;password&quot;).strip()</span><br><span class="line"><span class="code">    try:</span></span><br><span class="line"><span class="code">        self.phone = login_info.get(&quot;phone&quot;).strip()</span></span><br><span class="line"><span class="code">        int(self.phone)</span></span><br><span class="line"><span class="code">    except Exception as f:</span></span><br><span class="line"><span class="code">        config_module_log.info(&quot;手机号格式错误(带有非数字)&quot;)</span></span><br><span class="line"><span class="code">        config_module_log.error(f)</span></span><br><span class="line"><span class="code">        exit(-1)</span></span><br><span class="line"><span class="code">    self.address = login_info[&quot;address&quot;]</span></span><br><span class="line"><span class="code">    self.latitude = login_info[&quot;latitude&quot;]</span></span><br><span class="line"><span class="code">    self.longitude = login_info[&#x27;longitude&#x27;]</span></span><br><span class="line"><span class="code">    self.start_time = login_info.get(&quot;start_time&quot;,&quot;08&quot;) #上班打卡时间</span></span><br><span class="line"><span class="code">    self.end_time = login_info.get(&quot;end_time&quot;,&quot;18&quot;) #下班打卡时间</span></span><br><span class="line"><span class="code">    self.token = login_info.get(&quot;token&quot;)</span></span><br><span class="line"><span class="code">    self.user_id = login_info.get(&quot;user_id&quot;)</span></span><br><span class="line"><span class="code">    self.plan_id = login_info.get(&quot;plan_id&quot;)</span></span><br><span class="line"><span class="code">    self.city = login_info[&#x27;city&#x27;]</span></span><br><span class="line"><span class="code">    self.province = login_info[&#x27;province&#x27;]</span></span><br><span class="line"><span class="code">    self.path = path</span></span><br><span class="line"><span class="code">    self.is_repeat_clock_in = login_info.get(&#x27;is_repeat_clock_in&#x27;,True) #补签（默认开启）</span></span><br><span class="line"><span class="code">    self.is_submit_daily = login_info[&#x27;xuanbujiao&#x27;] #日报的开关</span></span><br><span class="line"><span class="code">    self.is_submit_weekly = login_info[&#x27;zhobao&#x27;] #周报的开关</span></span><br><span class="line"><span class="code">    self.submit_weekly_time = login_info.get(&quot;submit_weekly_time&quot;,6) #周报提交时间（默认每周六）</span></span><br><span class="line"><span class="code">    self.submit_month_report_time = login_info.get(&#x27;submit_month_report_time&#x27;,1) #月报提交时间（默认为每个月1号）如果需要关闭留空即可，删除“,1”这两个文字</span></span><br><span class="line"><span class="code">    self.bujiaorubao=login_info[&quot;bujiao&quot;] #补交日报开关</span></span><br><span class="line"><span class="code">    self.bujiao_start_date=login_info.get(&#x27;bujiao_start_date&#x27;,&quot;&quot;)# 开始日期</span></span><br><span class="line"><span class="code">    self.bujiao_end_date=login_info.get(&#x27;bujiao_end_date&#x27;,&quot;&quot;)# 结束日期</span></span><br><span class="line"><span class="code">    self.bujiaozhobao = login_info[&quot;reedy&quot;] #补交周报开关</span></span><br><span class="line"><span class="code">    self.requirement_week_num=login_info.get(&#x27;requirement_week_num&#x27;,&quot;&quot;) # 补交的周数量</span></span><br></pre></td></tr></table></figure>
+</li>
+<li><p>修改<strong>textFile&#x2F;submit_time.json</strong>文件（选改可以保持默认）</p>
+<figure class="highlight markdown"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">&#123;</span><br><span class="line"><span class="code">    &quot;daily_next_submit_Time&quot;: 8, #日报下次提交时间</span></span><br><span class="line"><span class="code">    &quot;weekly_next_submit_Time&quot;: 6, #周报下次提交时间</span></span><br><span class="line"><span class="code">    &quot;month_next_submit_Report&quot;: 1 #月报下次提交时间</span></span><br><span class="line"><span class="code">&#125;</span></span><br></pre></td></tr></table></figure>
+</li>
+<li><p>上传后端文件。</p>
+</li>
+</ol>
+<p><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="https://image.luomengguo.top/mili/2023/12/24/65870e44bde80.png" alt="image.png"></p>
+<ul>
+<li>双击解压文件，解压路径为 <strong>&#x2F;www&#x2F;wwwroot&#x2F;gong。</strong></li>
+</ul>
+<p><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="https://image.luomengguo.top/mili/2023/12/24/65870e46f06b9.png" alt="image.png"></p>
+<ul>
+<li><p>使用ssh连接工具<a target="_blank" rel="noopener" href="https://www.hostbuf.com/t/988.html">FinalShell</a>，连接服务器。逐条执行下面的指令</p>
+<figure class="highlight markdown"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">cd /www/wwwroot/gong #到执行目录下</span><br><span class="line">apt install python3-pip #安装pip3工具，当遇到选择的时候全部选择Y</span><br><span class="line">pip3 install -r requirements.txt #安装必要的库</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>试运行一下，没有报错就是好的。</p>
+<figure class="highlight markdown"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">python3 main.py</span><br></pre></td></tr></table></figure>
+<p><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="https://image.luomengguo.top/mili/2023/12/24/65870e4c082eb.png" alt="image.png"></p>
+</li>
+</ul>
+<h2 id="配置执行定时任务"><a href="#配置执行定时任务" class="headerlink" title="配置执行定时任务"></a>配置执行定时任务</h2><ol>
+<li>这步执行两次一次是上班卡，一次是下班卡。</li>
+</ol>
+<p>执行周期选择：每天8点和每天18点<br />脚本内容：</p>
+<figure class="highlight markdown"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">cd /www/wwwroot/gong </span><br><span class="line">/usr/bin/python3 main.py &gt;&gt; /www/wwwroot/gong/logfile.log 2&gt;&amp;1</span><br></pre></td></tr></table></figure>
+<p><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="https://image.luomengguo.top/mili/2023/12/24/65870e4dbffb2.png" alt="image.png"></p>
+<h2 id="配置查验工具"><a href="#配置查验工具" class="headerlink" title="配置查验工具"></a>配置查验工具</h2><p>在查验工具的文件夹中找到为<strong>database_config.json</strong>文件，修改数据库参数。支持配置多个数据库。</p>
+<figure class="highlight markdown"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line">&#123;</span><br><span class="line"><span class="code">    &quot;1&quot;: &#123;</span></span><br><span class="line"><span class="code">        &quot;host&quot;: &quot;&quot;,#服务器的IP地址</span></span><br><span class="line"><span class="code">        &quot;user&quot;: &quot;gongxueyun&quot;, #数据库的用户名</span></span><br><span class="line"><span class="code">        &quot;password&quot;: &quot;&quot;, #数据库密码（不是root密码）</span></span><br><span class="line"><span class="code">        &quot;database&quot;: &quot;gongxueyun&quot;,  #数据库名称</span></span><br><span class="line"><span class="code">        &quot;port&quot;: 3306 # 数据库端口一般默认为3306</span></span><br><span class="line"><span class="code">    &#125;,</span></span><br><span class="line"><span class="code">        &quot;2&quot;: &#123;</span></span><br><span class="line"><span class="code">        &quot;host&quot;: &quot;&quot;,#服务器的IP地址</span></span><br><span class="line"><span class="code">        &quot;user&quot;: &quot;gongxueyun&quot;, #数据库的用户名</span></span><br><span class="line"><span class="code">        &quot;password&quot;: &quot;&quot;, #数据库密码（不是root密码）</span></span><br><span class="line"><span class="code">        &quot;database&quot;: &quot;gongxueyun&quot;,  #数据库名称</span></span><br><span class="line"><span class="code">        &quot;port&quot;: 3306 # 数据库端口一般默认为3306</span></span><br><span class="line"><span class="code">    &#125;</span></span><br><span class="line"><span class="code"></span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+</article><div class="post-copyright"><div class="copyright-cc-box"><i class="anzhiyufont anzhiyu-icon-copyright"></i></div><div class="post-copyright__author_box"><a class="post-copyright__author_img" href="/" title="头像"><img class="post-copyright__author_img_back" src="https://img01.anheyu.com/useruploads/128/2023/06/03/647b2d3308108.webp" title="头像" alt="头像"><img class="post-copyright__author_img_front" src="https://img01.anheyu.com/useruploads/128/2023/06/03/647b2d3308108.webp" title="头像" alt="头像"></a><div class="post-copyright__author_name">米粒</div><div class="post-copyright__author_desc">追逐梦想</div></div><div class="post-copyright__post__info"><a class="post-copyright__original" title="该文章为原创文章，注意版权协议" href="https://luomengguo.top/posts/2a9d.html">原创</a><a class="post-copyright-title"><span onclick="rm.copyPageUrl('https://luomengguo.top/posts/2a9d.html')">服务器打卡部署文档</span></a></div><div class="post-tools" id="post-tools"><div class="post-tools-left"><div class="rewardLeftButton"></div><div class="shareRight"><div class="share-link mobile"><div class="share-qrcode"><div class="share-button" title="使用手机访问这篇文章"><i class="anzhiyufont anzhiyu-icon-qrcode"></i></div><div class="share-main"><div class="share-main-all"><div id="qrcode" title="https://luomengguo.top/posts/2a9d.html"></div><div class="reward-dec">使用手机访问这篇文章</div></div></div></div></div><div class="share-link weibo"><a class="share-button" target="_blank" href="https://service.weibo.com/share/share.php?title=服务器打卡部署文档&amp;url=https://luomengguo.top/posts/2a9d.html&amp;pic=https://cdn.luomengguo.top/mi/2023/12/Desktop%201%20(1).webp" rel="external nofollow noreferrer noopener"><i class="anzhiyufont anzhiyu-icon-weibo"></i></a></div><script>function copyCurrentPageUrl() {
+  var currentPageUrl = window.location.href;
+  var input = document.createElement("input");
+  input.setAttribute("value", currentPageUrl);
+  document.body.appendChild(input);
+  input.select();
+  input.setSelectionRange(0, 99999);
+  document.execCommand("copy");
+  document.body.removeChild(input);
+}</script><div class="share-link copyurl"><div class="share-button" id="post-share-url" title="复制链接" onclick="copyCurrentPageUrl()"><i class="anzhiyufont anzhiyu-icon-link"></i></div></div></div></div></div><div class="post-copyright__notice"><span class="post-copyright-info">本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank">CC BY-NC-SA 4.0</a> 许可协议。转载请注明来自 <a href="https://luomengguo.top" target="_blank">米粒</a>！</span></div></div><div class="post-tools-right"><div class="tag_share"><div class="post-meta__box"><div class="post-meta__box__tag-list"><a class="post-meta__box__tags" href="/tags/%E9%83%A8%E7%BD%B2%E6%96%87%E6%A1%A3/"><span class="tags-punctuation"> <i class="anzhiyufont anzhiyu-icon-tag"></i></span>部署文档<span class="tagsPageCount">1</span></a></div></div></div><div class="post_share"><div class="social-share" data-image="https://cdn.luomengguo.top/mi/2023/12/Desktop%201%20(1).webp" data-sites="facebook,twitter,wechat,weibo,qq"></div><link rel="stylesheet" href="https://cdn.cbd.int/butterfly-extsrc@1.1.3/sharejs/dist/css/share.min.css" media="print" onload="this.media='all'"/><script src="https://cdn.cbd.int/butterfly-extsrc@1.1.3/sharejs/dist/js/social-share.min.js" defer="defer"></script></div></div><nav class="pagination-post" id="pagination"><div class="prev-post pull-full"><a href="/posts/92c8.html"><img class="prev-cover" src="https://cdn.luomengguo.top/mi/2023/10/img23.jpg" onerror="onerror=null;src='/img/404.jpg'" alt="cover of previous post"><div class="pagination-info"><div class="label">上一篇</div><div class="prev_info">windows命令行与批处理</div></div></a></div></nav><hr/><div id="post-comment"><div class="comment-head"><div class="comment-headline"><i class="anzhiyufont anzhiyu-icon-comments"></i><span> 评论</span></div><div class="comment-randomInfo"><a onclick="anzhiyu.addRandomCommentInfo()" href="javascript:void(0)">匿名评论</a><a href="/privacy" style="margin-left: 4px">隐私政策</a></div><div class="comment-tips" id="comment-tips"><span>✅ 你无需删除空行，直接评论以获取最佳展示效果</span></div></div><div class="comment-wrap"><div><div id="twikoo-wrap"></div></div></div></div><div class="comment-barrage"></div></div><div class="aside-content" id="aside-content"><div class="card-widget card-info"><div class="card-content"><div class="author-info__sayhi" id="author-info__sayhi" onclick="anzhiyu.changeSayHelloText()"></div><div class="author-info-avatar"><img class="avatar-img" src="https://img01.anheyu.com/useruploads/128/2023/06/03/647b2d3308108.webp" onerror="this.onerror=null;this.src='/img/friend_404.gif'" alt="avatar"/><div class="author-status"><img class="g-status" src="https://bu.dusays.com/2023/08/24/64e6ce9c507bb.png" alt="status"/></div></div><div class="author-info__description"><div style="line-height:1.38;margin:0.6rem 0;text-align:justify;color:rgba(255, 255, 255, 0.8);">这有关于<b style="color:#fff">产品、开发</b>相关的问题和看法，还有<b style="color:#fff">文章翻译</b>和<b style="color:#fff">分享</b>。</div><div style="line-height:1.38;margin:0.6rem 0;text-align:justify;color:rgba(255, 255, 255, 0.8);">相信你可以在这里找到对你有用的<b style="color:#fff">知识</b>和<b style="color:#fff">教程</b>。</div></div><div class="author-info__bottom-group"><a class="author-info__bottom-group-left" href="/null"><h1 class="author-info__name">米粒</h1><div class="author-info__desc">追逐梦想</div></a><div class="card-info-social-icons is-center"><a class="social-icon faa-parent animated-hover" href="https://github.com/DiyaDe" target="_blank" title="Github"><i class="anzhiyufont anzhiyu-icon-github"></i></a><a class="social-icon faa-parent animated-hover" href="https://space.bilibili.com/491478728" target="_blank" title="BiliBili"><i class="anzhiyufont anzhiyu-icon-bilibili"></i></a></div></div></div></div><div class="card-widget" id="newYear"><div class="item-headline"><i></i><span></span></div><div class="item-content"> <div class="newYear-slider"> <div class="swiper-wrapper"> <div class="swiper-slide" style="background-image:url(https://image.luomengguo.top/mili/2024/01/01/65929bac2bec0.webp")"></div> <div class="swiper-slide" style="background-image:url(https://image.luomengguo.top/mili/2024/01/01/65929be561778.webp)"></div> <div class="swiper-slide" style="background-image:url(https://image.luomengguo.top/mili/2024/01/01/65929bf03a90c.webp)"></div> <div class="swiper-slide" style="background-image:url(https://image.luomengguo.top/mili/2024/01/01/65929bf892219.webp)"></div> </div> </div> <div id="newYear-main"> <div class="mask"></div> <p class="title"></p> <div class="newYear-time"></div> <p class="today" style="text-align: right;"></p> </div> </div></div><div class="sticky_layout"><div class="card-widget" id="card-toc"><div class="item-headline"><i class="anzhiyufont anzhiyu-icon-bars"></i><span>文章目录</span><span class="toc-percentage"></span></div><div class="toc-content"><ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#%E6%96%87%E6%A1%A3%E5%A3%B0%E6%98%8E"><span class="toc-number">1.</span> <span class="toc-text">文档声明</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E6%9B%B4%E6%96%B0%E6%97%A5%E5%BF%97"><span class="toc-number">2.</span> <span class="toc-text">更新日志</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E5%8A%9F%E8%83%BD%E4%BB%8B%E7%BB%8D"><span class="toc-number">3.</span> <span class="toc-text">功能介绍</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E4%BD%BF%E7%94%A8%E6%95%99%E7%A8%8B"><span class="toc-number">4.</span> <span class="toc-text">使用教程</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E5%BF%AB%E9%80%9F%E5%BC%80%E5%A7%8B"><span class="toc-number">5.</span> <span class="toc-text">快速开始</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%9C%8D%E5%8A%A1%E5%99%A8%E9%80%89%E6%8B%A9"><span class="toc-number">5.1.</span> <span class="toc-text">服务器选择</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%9C%8D%E5%8A%A1%E5%99%A8%E7%B3%BB%E7%BB%9F%E9%80%89%E6%8B%A9"><span class="toc-number">5.2.</span> <span class="toc-text">服务器系统选择</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E8%AE%BE%E7%BD%AE%E6%9C%8D%E5%8A%A1%E5%AE%89%E5%85%A8"><span class="toc-number">5.3.</span> <span class="toc-text">设置服务安全</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E9%85%8D%E7%BD%AESSH%E8%BF%9E%E6%8E%A5%E6%9C%8D%E5%8A%A1%E5%99%A8"><span class="toc-number">5.4.</span> <span class="toc-text">配置SSH连接服务器</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%AE%89%E8%A3%85%E5%AE%9D%E5%A1%94%E9%9D%A2%E6%9D%BF"><span class="toc-number">5.5.</span> <span class="toc-text">安装宝塔面板</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E9%85%8D%E7%BD%AE%E6%95%B0%E6%8D%AE%E5%BA%93"><span class="toc-number">5.6.</span> <span class="toc-text">配置数据库</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%90%AD%E5%BB%BA%E5%89%8D%E7%AB%AF"><span class="toc-number">5.7.</span> <span class="toc-text">搭建前端</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E9%85%8D%E7%BD%AE%E5%90%8E%E7%AB%AF"><span class="toc-number">5.8.</span> <span class="toc-text">配置后端</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E9%85%8D%E7%BD%AE%E6%89%A7%E8%A1%8C%E5%AE%9A%E6%97%B6%E4%BB%BB%E5%8A%A1"><span class="toc-number">5.9.</span> <span class="toc-text">配置执行定时任务</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E9%85%8D%E7%BD%AE%E6%9F%A5%E9%AA%8C%E5%B7%A5%E5%85%B7"><span class="toc-number">5.10.</span> <span class="toc-text">配置查验工具</span></a></li></ol></li></ol></div></div><div class="card-widget card-recent-post"><div class="item-headline"><i class="anzhiyufont anzhiyu-icon-history"></i><span>最近发布</span></div><div class="aside-list"><div class="aside-list-item"><a class="thumbnail" href="/posts/2a9d.html" title="服务器打卡部署文档"><img src="https://cdn.luomengguo.top/mi/2023/12/Desktop%201%20(1).webp" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="服务器打卡部署文档"/></a><div class="content"><a class="title" href="/posts/2a9d.html" title="服务器打卡部署文档">服务器打卡部署文档</a><time datetime="2023-12-16T16:53:27.000Z" title="发表于 2023-12-16 16:53:27">2023-12-16</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/posts/92c8.html" title="windows命令行与批处理"><img src="https://cdn.luomengguo.top/mi/2023/10/img23.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="windows命令行与批处理"/></a><div class="content"><a class="title" href="/posts/92c8.html" title="windows命令行与批处理">windows命令行与批处理</a><time datetime="2023-10-29T11:17:22.000Z" title="发表于 2023-10-29 11:17:22">2023-10-29</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/posts/b9f4.html" title="PicGo配置教程(自用)"><img src="https://cdn.luomengguo.top/mi/2023/10/PicGo.webp" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="PicGo配置教程(自用)"/></a><div class="content"><a class="title" href="/posts/b9f4.html" title="PicGo配置教程(自用)">PicGo配置教程(自用)</a><time datetime="2023-10-26T15:53:30.000Z" title="发表于 2023-10-26 15:53:30">2023-10-26</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/posts/a0ad.html" title="树莓派4B opencv循迹小车开发日志"><img src="https://cdn.luomengguo.top/mi/2023/10/%E7%94%BB%E6%9D%BF%201.webp" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="树莓派4B opencv循迹小车开发日志"/></a><div class="content"><a class="title" href="/posts/a0ad.html" title="树莓派4B opencv循迹小车开发日志">树莓派4B opencv循迹小车开发日志</a><time datetime="2023-10-12T17:26:18.000Z" title="发表于 2023-10-12 17:26:18">2023-10-12</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/posts/ede1.html" title="Python代码打包exe"><img src="https://cdn.luomengguo.top/mi/2023/08/python.webp" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="Python代码打包exe"/></a><div class="content"><a class="title" href="/posts/ede1.html" title="Python代码打包exe">Python代码打包exe</a><time datetime="2023-08-27T22:34:17.000Z" title="发表于 2023-08-27 22:34:17">2023-08-27</time></div></div></div></div></div></div></div></main><footer id="footer"><div id="footer-wrap"><div id="footer_deal"><a class="deal_link" target="_blank" rel="noopener" href="https://mail.qq.com/cgi-bin/qm_share?t=qm_mailme&amp;email=3332326364@qq.com" title="email"><i class="anzhiyufont anzhiyufont anzhiyu-icon-envelope"></i></a><a class="deal_link" target="_blank" rel="noopener" href="https://weibo.com/u/7838451268" title="微博"><i class="anzhiyufont anzhiyufont anzhiyu-icon-weibo"></i></a><img class="footer_mini_logo" title="返回顶部" alt="返回顶部" onclick="anzhiyu.scrollToDest(0, 500)" src="https://img01.anheyu.com/useruploads/128/2023/06/03/647b2d3308108.webp" size="50px"/><a class="deal_link" target="_blank" rel="noopener" href="https://github.com/DiyaDe" title="Github"><i class="anzhiyufont anzhiyufont anzhiyu-icon-github"></i></a><a class="deal_link" target="_blank" rel="noopener" href="https://space.bilibili.com/491478728" title="Bilibili"><i class="anzhiyufont anzhiyufont anzhiyu-icon-bilibili"></i></a></div><div id="anzhiyu-footer"><div class="footer-group"><div class="footer-title">服务</div><div class="footer-links"><a class="footer-item" title="51la统计" target="_blank" rel="noopener" href="https://v6.51.la/">51la统计</a><a class="footer-item" title="十年之约" target="_blank" rel="noopener" href="https://www.foreverblog.cn/">十年之约</a><a class="footer-item" title="开往" target="_blank" rel="noopener" href="https://github.com/travellings-link/travellings">开往</a></div></div><div class="footer-group"><div class="footer-title">导航</div><div class="footer-links"><a class="footer-item" title="即刻短文" href="/essay/">即刻短文</a><a class="footer-item" title="友链文章" href="/fcircle/">友链文章</a><a class="footer-item" title="留言板" href="/comments/">留言板</a></div></div><div class="footer-group"><div class="footer-title">关于</div><div class="footer-links"><a class="footer-item" title="关于我" href="/about/">关于我</a><a class="footer-item" title="关于主题" target="_blank" rel="noopener" href="https://docs.anheyu.com/">关于主题</a><a class="footer-item" title="源码" target="_blank" rel="noopener" href="https://github.com/anzhiyu-c/hexo-theme-anzhiyu">源码</a></div></div><div class="footer-group"><div class="footer-title-group"><div class="footer-title">友链</div><a class="random-friends-btn" id="footer-random-friends-btn" href="javascript:addFriendLinksInFooter();" title="换一批友情链接"><i class="anzhiyufont anzhiyu-icon-arrow-rotate-right"></i></a></div><div class="footer-links" id="friend-links-in-footer"></div></div><div class="t-t-l" style="width: 25%;display: flex;align-items:center;justify-content: center;width: calc(15% - 10px); text-align:center;flex-direction: column;"><p class="ft-t t-l-t">公益广告🧬</p><div class="bg-ad"><div>国家反诈中心是国务院打击治理电信网络新型违法犯罪工作部际联席会议合成作战平台，集资源整合、情报研判、侦查指挥为一体，在打击、防范、治理电信网络诈骗等新型违法犯罪中发挥着重要作用。</div><div class="btn-xz-box"><a class="btn-xz" target="_blank" rel="noopener" href="https://www.hack-gov.com.cn/posts/21480.html">下载（国家反诈中心） APP</a></div></div></div></div><div id="workboard"><img class="workSituationImg boardsign" src="https://img01.anheyu.com/useruploads/128/2023/06/03/647b2cedc0e01.webp" alt="距离获的国奖也就还差一个大佬带我~" title="距离获的国奖也就还差一个大佬带我~"/><div id="runtimeTextTip"></div></div><p id="ghbdages"><a class="github-badge" target="_blank" href="https://hexo.io/" style="margin-inline:5px" data-title="博客框架为Hexo_v5.4.0" title="博客框架为Hexo_v5.4.0"><img src="https://npm.elemecdn.com/anzhiyu-blog@2.1.5/img/badge/Frame-Hexo.svg" alt="博客框架为Hexo_v5.4.0"/></a><a class="github-badge" target="_blank" href="https://anheyu.com/" style="margin-inline:5px" data-title="本站使用AnZhiYu主题" title="本站使用AnZhiYu主题"><img src="https://npm.elemecdn.com/anzhiyu-theme-static@1.0.9/img/Theme-AnZhiYu-2E67D3.svg" alt="本站使用AnZhiYu主题"/></a><a class="github-badge" target="_blank" href="https://www.dogecloud.com/" style="margin-inline:5px" data-title="本站使用多吉云为静态资源提供CDN加速" title="本站使用多吉云为静态资源提供CDN加速"><img src="https://npm.elemecdn.com/anzhiyu-blog@2.2.0/img/badge/CDN-多吉云-3693F3.svg" alt="本站使用多吉云为静态资源提供CDN加速"/></a><a class="github-badge" target="_blank" href="https://github.com/" style="margin-inline:5px" data-title="本站项目由Github托管" title="本站项目由Github托管"><img src="https://npm.elemecdn.com/anzhiyu-blog@2.1.5/img/badge/Source-Github.svg" alt="本站项目由Github托管"/></a><a class="github-badge" target="_blank" href="http://creativecommons.org/licenses/by-nc-sa/4.0/" style="margin-inline:5px" data-title="本站采用知识共享署名-非商业性使用-相同方式共享4.0国际许可协议进行许可" title="本站采用知识共享署名-非商业性使用-相同方式共享4.0国际许可协议进行许可"><img src="https://npm.elemecdn.com/anzhiyu-blog@2.2.0/img/badge/Copyright-BY-NC-SA.svg" alt="本站采用知识共享署名-非商业性使用-相同方式共享4.0国际许可协议进行许可"/></a></p></div><div id="footer-bar"><div class="footer-bar-links"><div class="footer-bar-left"><div id="footer-bar-tips"><div class="copyright">&copy;2020 - 2024 By <a class="footer-bar-link" href="/" title="米粒" target="_blank">米粒</a></div></div><div id="footer-type-tips"></div></div><div class="footer-bar-right"><a class="footer-bar-link" target="_blank" rel="noopener" href="https://github.com/anzhiyu-c/hexo-theme-anzhiyu" title="主题">主题</a><a class="footer-bar-link" target="_blank" rel="noopener" href="https://image.anheyu.com" title="图床">图床</a><a class="footer-bar-link" target="_blank" rel="noopener" href="https://beian.miit.gov.cn/" title="蜀ICP备-2023010886号">蜀ICP备-2023010886号</a><a class="footer-bar-link" target="_blank" rel="noopener" href="https://www.beian.gov.cn/portal/registerSystemInfo?recordcode=51011202000586" title="川公网安备-51011202000586号">川公网安备-51011202000586号</a></div></div></div></footer></div><div id="sidebar"><div id="menu-mask"></div><div id="sidebar-menus"><div class="sidebar-site-data site-data is-center"><a href="/archives/" title="archive"><div class="headline">文章</div><div class="length-num">32</div></a><a href="/tags/" title="tag"><div class="headline">标签</div><div class="length-num">36</div></a><a href="/categories/" title="category"><div class="headline">分类</div><div class="length-num">12</div></a></div><span class="sidebar-menu-item-title">功能</span><div class="sidebar-menu-item"><a class="darkmode_switchbutton menu-child" href="javascript:void(0);" title="显示模式"><i class="anzhiyufont anzhiyu-icon-circle-half-stroke"></i><span>显示模式</span></a></div><div class="back-menu-list-groups"><div class="back-menu-list-group"><div class="back-menu-list-title">网页</div><div class="back-menu-list"><a class="back-menu-item" href="https://luomengguo.top/" title="博客"><img class="back-menu-item-icon" src="https://img01.anheyu.com/useruploads/128/2023/06/03/647b2d3308108.webp" alt="博客"/><span class="back-menu-item-text">博客</span></a></div></div><div class="back-menu-list-group"><div class="back-menu-list-title">项目</div><div class="back-menu-list"><a class="back-menu-item" target="_blank" rel="noopener" href="https://image.luomengguo.top" title="米粒图床"><img class="back-menu-item-icon" src="https://image.anheyu.com/favicon.ico" alt="米粒图床"/><span class="back-menu-item-text">米粒图床</span></a></div></div></div><div class="menus_items"><div class="menus_item"><a class="site-page" href="javascript:void(0);"><span> 文章</span></a><ul class="menus_item_child"><li><a class="site-page child faa-parent animated-hover" href="/archives/"><i class="anzhiyufont anzhiyu-icon-box-archive faa-tada" style="font-size: 0.9em;"></i><span> 隧道</span></a></li><li><a class="site-page child faa-parent animated-hover" href="/categories/"><i class="anzhiyufont anzhiyu-icon-shapes faa-tada" style="font-size: 0.9em;"></i><span> 分类</span></a></li><li><a class="site-page child faa-parent animated-hover" href="/tags/"><i class="anzhiyufont anzhiyu-icon-tags faa-tada" style="font-size: 0.9em;"></i><span> 标签</span></a></li></ul></div><div class="menus_item"><a class="site-page" href="javascript:void(0);"><span> 友链</span></a><ul class="menus_item_child"><li><a class="site-page child faa-parent animated-hover" href="/link/"><i class="anzhiyufont anzhiyu-icon-link faa-tada" style="font-size: 0.9em;"></i><span> 友人帐</span></a></li><li><a class="site-page child faa-parent animated-hover" href="/fcircle/"><i class="anzhiyufont anzhiyu-icon-artstation faa-tada" style="font-size: 0.9em;"></i><span> 朋友圈</span></a></li><li><a class="site-page child faa-parent animated-hover" href="/comments/"><i class="anzhiyufont anzhiyu-icon-envelope faa-tada" style="font-size: 0.9em;"></i><span> 留言板</span></a></li></ul></div><div class="menus_item"><a class="site-page" href="javascript:void(0);"><span> 我的</span></a><ul class="menus_item_child"><li><a class="site-page child faa-parent animated-hover" href="/music/?id=7012261895&amp;server=tencent"><i class="anzhiyufont anzhiyu-icon-music faa-tada" style="font-size: 0.9em;"></i><span> 音乐馆</span></a></li><li><a class="site-page child faa-parent animated-hover" href="/bangumis/"><i class="anzhiyufont anzhiyu-icon-bilibili faa-tada" style="font-size: 0.9em;"></i><span> 追番页</span></a></li><li><a class="site-page child faa-parent animated-hover" href="/album/"><i class="anzhiyufont anzhiyu-icon-images faa-tada" style="font-size: 0.9em;"></i><span> 相册集</span></a></li></ul></div><div class="menus_item"><a class="site-page" href="javascript:void(0);"><span> 关于</span></a><ul class="menus_item_child"><li><a class="site-page child faa-parent animated-hover" href="/about/"><i class="anzhiyufont anzhiyu-icon-paper-plane faa-tada" style="font-size: 0.9em;"></i><span> 关于本人</span></a></li><li><a class="site-page child faa-parent animated-hover" href="/essay/"><i class="anzhiyufont anzhiyu-icon-lightbulb faa-tada" style="font-size: 0.9em;"></i><span> 闲言碎语</span></a></li><li><a class="site-page child faa-parent animated-hover" href="javascript:toRandomPost()"><i class="anzhiyufont anzhiyu-icon-shoe-prints1 faa-tada" style="font-size: 0.9em;"></i><span> 随便逛逛</span></a></li></ul></div></div><span class="sidebar-menu-item-title">标签</span><div class="card-tags"><div class="item-headline"></div><div class="card-tag-cloud"><a href="/tags/CF%E4%BC%98%E9%80%89IP/" style="font-size: 0.88rem;">CF优选IP<sup>1</sup></a><a href="/tags/ChatGPT/" style="font-size: 0.88rem;">ChatGPT<sup>1</sup></a><a href="/tags/ChatGPT-Plus/" style="font-size: 0.88rem;">ChatGPT Plus<sup>1</sup></a><a href="/tags/C%E8%AF%AD%E8%A8%80/" style="font-size: 0.88rem;">C语言<sup>1</sup></a><a href="/tags/ESP32/" style="font-size: 0.88rem;">ESP32<sup>1</sup></a><a href="/tags/Hexo/" style="font-size: 0.88rem;">Hexo<sup>5</sup></a><a href="/tags/OneTool/" style="font-size: 0.88rem;">OneTool<sup>1</sup></a><a href="/tags/PLC/" style="font-size: 0.88rem;">PLC<sup>1</sup></a><a href="/tags/PicGo%E9%85%8D%E7%BD%AE/" style="font-size: 0.88rem;">PicGo配置<sup>1</sup></a><a href="/tags/Python/" style="font-size: 0.88rem;">Python<sup>5</sup></a><a href="/tags/QQ%EF%BC%8C%E7%BD%91%E6%98%93%E4%BA%91%EF%BC%8CB%E7%AB%99%E4%BB%A3%E6%8C%82%E7%AD%BE%E5%88%B0/" style="font-size: 0.88rem;">QQ，网易云，B站代挂签到<sup>1</sup></a><a href="/tags/RobotStudio/" style="font-size: 0.88rem;">RobotStudio<sup>1</sup></a><a href="/tags/Tag-Plugins/" style="font-size: 0.88rem;">Tag Plugins<sup>1</sup></a><a href="/tags/butterfly/" style="font-size: 0.88rem;">butterfly<sup>2</sup></a><a href="/tags/ssl%E8%AF%81%E4%B9%A6/" style="font-size: 0.88rem;">ssl证书<sup>1</sup></a><a href="/tags/windows/" style="font-size: 0.88rem;">windows<sup>1</sup></a><a href="/tags/%E4%B8%93%E6%9C%AC%E5%A5%97%E8%AF%BB/" style="font-size: 0.88rem;">专本套读<sup>1</sup></a><a href="/tags/%E5%85%AC%E7%9B%8A%E5%B9%BF%E5%91%8A/" style="font-size: 0.88rem;">公益广告<sup>1</sup></a><a href="/tags/%E5%8D%81%E4%B8%83%E5%B1%8A%E6%8C%91%E6%88%98%E6%9D%AF/" style="font-size: 0.88rem;">十七届挑战杯<sup>1</sup></a><a href="/tags/%E5%9B%BE%E5%BA%8A/" style="font-size: 0.88rem;">图床<sup>1</sup></a><a href="/tags/%E5%AD%A6%E4%B9%A0%E9%80%9A/" style="font-size: 0.88rem;">学习通<sup>1</sup></a><a href="/tags/%E5%AE%9D%E5%A1%94%E9%9D%A2%E6%9D%BF/" style="font-size: 0.88rem;">宝塔面板<sup>1</sup></a><a href="/tags/%E5%B7%A5%E4%B8%9A%E6%9C%BA%E5%99%A8%E4%BA%BA/" style="font-size: 0.88rem;">工业机器人<sup>1</sup></a><a href="/tags/%E5%B9%B4%E5%BA%A6%E6%80%BB%E7%BB%93/" style="font-size: 0.88rem;">年度总结<sup>1</sup></a><a href="/tags/%E5%BE%AA%E8%BF%B9%E5%B0%8F%E8%BD%A6/" style="font-size: 0.88rem;">循迹小车<sup>1</sup></a><a href="/tags/%E6%A0%91%E8%8E%93%E6%B4%BE/" style="font-size: 0.88rem;">树莓派<sup>1</sup></a><a href="/tags/%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0/" style="font-size: 0.88rem;">深度学习<sup>1</sup></a><a href="/tags/%E7%94%B5%E8%84%91%E4%BD%BF%E7%94%A8%E5%B0%8F%E6%8A%80%E5%B7%A7/" style="font-size: 0.88rem;">电脑使用小技巧<sup>1</sup></a><a href="/tags/%E7%99%BE%E5%BA%A6%E7%BD%91%E7%9B%98/" style="font-size: 0.88rem;">百度网盘<sup>1</sup></a><a href="/tags/%E7%AB%9E%E8%B5%9B/" style="font-size: 0.88rem;">竞赛<sup>3</sup></a><a href="/tags/%E7%BD%91%E7%9B%98%E4%B8%8D%E9%99%90%E9%80%9F/" style="font-size: 0.88rem;">网盘不限速<sup>1</sup></a><a href="/tags/%E8%A7%A3%E5%86%B3GitHub%E4%B8%8A%E4%BC%A0%E6%88%96%E8%BF%9E%E6%8E%A5%E9%97%AE%E9%A2%98/" style="font-size: 0.88rem;">解决GitHub上传或连接问题<sup>1</sup></a><a href="/tags/%E9%83%A8%E7%BD%B2%E6%96%87%E6%A1%A3/" style="font-size: 0.88rem;">部署文档<sup>1</sup></a><a href="/tags/%E9%83%A8%E7%BD%B2%E6%9C%8D%E5%8A%A1%E5%99%A8/" style="font-size: 0.88rem;">部署服务器<sup>1</sup></a><a href="/tags/%E9%98%BF%E9%87%8C%E4%BA%91/" style="font-size: 0.88rem;">阿里云<sup>1</sup></a><a href="/tags/%E9%A1%B5%E8%84%9A/" style="font-size: 0.88rem;">页脚<sup>1</sup></a></div></div><hr/></div></div><div id="rightside"><div id="rightside-config-hide"><button id="readmode" type="button" title="阅读模式"><i class="anzhiyufont anzhiyu-icon-book-open"></i></button><button id="translateLink" type="button" title="简繁转换">繁</button><button id="darkmode" type="button" title="浅色和深色模式转换"><i class="anzhiyufont anzhiyu-icon-circle-half-stroke"></i></button><button id="hide-aside-btn" type="button" title="单栏和双栏切换"><i class="anzhiyufont anzhiyu-icon-arrows-left-right"></i></button></div><div id="rightside-config-show"><button id="rightside-config" type="button" title="设置"><i class="anzhiyufont anzhiyu-icon-gear"></i></button><button class="close" id="mobile-toc-button" type="button" title="目录"><i class="anzhiyufont anzhiyu-icon-list-ul"></i></button><a id="to_comment" href="#post-comment" title="直达评论"><i class="anzhiyufont anzhiyu-icon-comments"></i></a><button id="go-up" type="button" title="回到顶部"><i class="anzhiyufont anzhiyu-icon-arrow-up"></i></button></div></div><div id="nav-music"><a id="nav-music-hoverTips" onclick="anzhiyu.musicToggle()" accesskey="m">播放音乐</a><div id="console-music-bg"></div><meting-js id="8152976493" server="netease" type="playlist" mutex="true" preload="none" theme="var(--anzhiyu-main)" data-lrctype="0" order="random"></meting-js></div><div id="algolia-search"><div class="search-dialog"><nav class="search-nav"><span class="search-dialog-title">搜索</span><button class="search-close-button"><i class="anzhiyufont anzhiyu-icon-xmark"></i></button></nav><div class="search-wrap"><div id="algolia-search-input"></div><hr/><div id="algolia-search-results"><div id="algolia-hits"></div><div id="algolia-pagination"></div><div id="algolia-info"><div class="algolia-stats"></div><div class="algolia-poweredBy"></div></div></div></div></div><div id="search-mask"></div></div><div id="rightMenu"><div class="rightMenu-group rightMenu-small"><div class="rightMenu-item" id="menu-backward"><i class="anzhiyufont anzhiyu-icon-arrow-left"></i></div><div class="rightMenu-item" id="menu-forward"><i class="anzhiyufont anzhiyu-icon-arrow-right"></i></div><div class="rightMenu-item" id="menu-refresh"><i class="anzhiyufont anzhiyu-icon-arrow-rotate-right" style="font-size: 1rem;"></i></div><div class="rightMenu-item" id="menu-top"><i class="anzhiyufont anzhiyu-icon-arrow-up"></i></div></div><div class="rightMenu-group rightMenu-line rightMenuPlugin"><div class="rightMenu-item" id="menu-copytext"><i class="anzhiyufont anzhiyu-icon-copy"></i><span>复制选中文本</span></div><div class="rightMenu-item" id="menu-pastetext"><i class="anzhiyufont anzhiyu-icon-paste"></i><span>粘贴文本</span></div><a class="rightMenu-item" id="menu-commenttext"><i class="anzhiyufont anzhiyu-icon-comment-medical"></i><span>引用到评论</span></a><div class="rightMenu-item" id="menu-newwindow"><i class="anzhiyufont anzhiyu-icon-window-restore"></i><span>新窗口打开</span></div><div class="rightMenu-item" id="menu-copylink"><i class="anzhiyufont anzhiyu-icon-link"></i><span>复制链接地址</span></div><div class="rightMenu-item" id="menu-copyimg"><i class="anzhiyufont anzhiyu-icon-images"></i><span>复制此图片</span></div><div class="rightMenu-item" id="menu-downloadimg"><i class="anzhiyufont anzhiyu-icon-download"></i><span>下载此图片</span></div><div class="rightMenu-item" id="menu-newwindowimg"><i class="anzhiyufont anzhiyu-icon-window-restore"></i><span>新窗口打开图片</span></div><div class="rightMenu-item" id="menu-search"><i class="anzhiyufont anzhiyu-icon-magnifying-glass"></i><span>站内搜索</span></div><div class="rightMenu-item" id="menu-searchBaidu"><i class="anzhiyufont anzhiyu-icon-magnifying-glass"></i><span>百度搜索</span></div><div class="rightMenu-item" id="menu-music-toggle"><i class="anzhiyufont anzhiyu-icon-play"></i><span>播放音乐</span></div><div class="rightMenu-item" id="menu-music-back"><i class="anzhiyufont anzhiyu-icon-backward"></i><span>切换到上一首</span></div><div class="rightMenu-item" id="menu-music-forward"><i class="anzhiyufont anzhiyu-icon-forward"></i><span>切换到下一首</span></div><div class="rightMenu-item" id="menu-music-playlist" onclick="window.open(&quot;https://y.qq.com/n/ryqq/playlist/8802438608&quot;, &quot;_blank&quot;);" style="display: none;"><i class="anzhiyufont anzhiyu-icon-radio"></i><span>查看所有歌曲</span></div><div class="rightMenu-item" id="menu-music-copyMusicName"><i class="anzhiyufont anzhiyu-icon-copy"></i><span>复制歌名</span></div></div><div class="rightMenu-group rightMenu-line rightMenuOther"><a class="rightMenu-item menu-link" id="menu-randomPost"><i class="anzhiyufont anzhiyu-icon-shuffle"></i><span>随便逛逛</span></a><a class="rightMenu-item menu-link" href="/categories/"><i class="anzhiyufont anzhiyu-icon-cube"></i><span>博客分类</span></a><a class="rightMenu-item menu-link" href="/tags/"><i class="anzhiyufont anzhiyu-icon-tags"></i><span>文章标签</span></a></div><div class="rightMenu-group rightMenu-line rightMenuOther"><a class="rightMenu-item" id="menu-copy" href="javascript:void(0);"><i class="anzhiyufont anzhiyu-icon-copy"></i><span>复制地址</span></a><a class="rightMenu-item" id="menu-commentBarrage" href="javascript:void(0);"><i class="anzhiyufont anzhiyu-icon-message"></i><span class="menu-commentBarrage-text">关闭热评</span></a><a class="rightMenu-item" id="menu-darkmode" href="javascript:void(0);"><i class="anzhiyufont anzhiyu-icon-circle-half-stroke"></i><span class="menu-darkmode-text">深色模式</span></a><a class="rightMenu-item" id="menu-translate" href="javascript:void(0);"><i class="anzhiyufont anzhiyu-icon-language"></i><span>轉為繁體</span></a></div></div><div id="rightmenu-mask"></div><div><script src="/js/utils.js"></script><script src="/js/main.js"></script><script src="/js/tw_cn.js"></script><script src="https://cdn.cbd.int/@fancyapps/ui@5.0.20/dist/fancybox/fancybox.umd.js"></script><script src="https://cdn.cbd.int/instant.page@5.2.0/instantpage.js" type="module"></script><script src="https://cdn.cbd.int/vanilla-lazyload@17.8.4/dist/lazyload.iife.min.js"></script><script src="https://cdn.cbd.int/node-snackbar@0.1.16/dist/snackbar.min.js"></script><script>var meting_api = "https://meting.luomengguo.top/?server=:server&type=:type&id=:id&auth=:auth&r=:r";
+</script><canvas id="universe"></canvas><script async src="https://npm.elemecdn.com/anzhiyu-theme-static@1.0.0/dark/dark.js"></script><script>// 消除控制台打印
+var HoldLog = console.log;
+console.log = function () {};
+let now1 = new Date();
+queueMicrotask(() => {
+  const Log = function () {
+    HoldLog.apply(console, arguments);
+  }; //在恢复前输出日志
+  const grt = new Date("10/03/2022 00:00:00"); //此处修改你的建站时间或者网站上线时间
+  now1.setTime(now1.getTime() + 250);
+  const days = (now1 - grt) / 1000 / 60 / 60 / 24;
+  const dnum = Math.floor(days);
+  const ascll = [
+    `欢迎使用安知鱼!`,
+    `生活明朗, 万物可爱`,
+    `
+        
+       █████╗ ███╗   ██╗███████╗██╗  ██╗██╗██╗   ██╗██╗   ██╗
+      ██╔══██╗████╗  ██║╚══███╔╝██║  ██║██║╚██╗ ██╔╝██║   ██║
+      ███████║██╔██╗ ██║  ███╔╝ ███████║██║ ╚████╔╝ ██║   ██║
+      ██╔══██║██║╚██╗██║ ███╔╝  ██╔══██║██║  ╚██╔╝  ██║   ██║
+      ██║  ██║██║ ╚████║███████╗██║  ██║██║   ██║   ╚██████╔╝
+      ╚═╝  ╚═╝╚═╝  ╚═══╝╚══════╝╚═╝  ╚═╝╚═╝   ╚═╝    ╚═════╝
+        
+        `,
+    "已上线",
+    dnum,
+    "天",
+    "©2020 By 安知鱼 V1.6.10",
+  ];
+  const ascll2 = [`NCC2-036`, `调用前置摄像头拍照成功，识别为【小笨蛋】.`, `Photo captured: `, `🤪`];
+
+  setTimeout(
+    Log.bind(
+      console,
+      `\n%c${ascll[0]} %c ${ascll[1]} %c ${ascll[2]} %c${ascll[3]}%c ${ascll[4]}%c ${ascll[5]}\n\n%c ${ascll[6]}\n`,
+      "color:#425AEF",
+      "",
+      "color:#425AEF",
+      "color:#425AEF",
+      "",
+      "color:#425AEF",
+      ""
+    )
+  );
+  setTimeout(
+    Log.bind(
+      console,
+      `%c ${ascll2[0]} %c ${ascll2[1]} %c \n${ascll2[2]} %c\n${ascll2[3]}\n`,
+      "color:white; background-color:#4fd953",
+      "",
+      "",
+      'background:url("https://npm.elemecdn.com/anzhiyu-blog@1.1.6/img/post/common/tinggge.gif") no-repeat;font-size:450%'
+    )
+  );
+
+  setTimeout(Log.bind(console, "%c WELCOME %c 你好，小笨蛋.", "color:white; background-color:#4f90d9", ""));
+
+  setTimeout(
+    console.warn.bind(
+      console,
+      "%c ⚡ Powered by 安知鱼 %c 你正在访问 米粒 的博客.",
+      "color:white; background-color:#f0ad4e",
+      ""
+    )
+  );
+
+  setTimeout(Log.bind(console, "%c W23-12 %c 你已打开控制台.", "color:white; background-color:#4f90d9", ""));
+
+  setTimeout(
+    console.warn.bind(console, "%c S013-782 %c 你现在正处于监控中.", "color:white; background-color:#d9534f", "")
+  );
+});</script><script async src="/anzhiyu/random.js"></script><script async="async">(function () {
+  var grt = new Date("10/03/2022 00:00:00"); //设置网站上线时间
+  var now = new Date();
+  var dnum;
+  var hnum;
+  var mnum;
+  var snum;
+  var nowHour;
+
+  // 计算并更新天数、小时数、分钟数和秒数
+  function updateTime() {
+    now = new Date(); // 更新 now 的值
+    nowHour = now.getHours(); // 更新 nowHour 的值
+    var days = (now - grt) / 1000 / 60 / 60 / 24;
+    dnum = Math.floor(days);
+    var hours = (now - grt) / 1000 / 60 / 60 - 24 * dnum;
+    hnum = Math.floor(hours);
+    if (String(hnum).length == 1) {
+      hnum = "0" + hnum;
+    }
+    var minutes = (now - grt) / 1000 / 60 - 24 * 60 * dnum - 60 * hnum;
+    mnum = Math.floor(minutes);
+    if (String(mnum).length == 1) {
+      mnum = "0" + mnum;
+    }
+    var seconds = (now - grt) / 1000 - 24 * 60 * 60 * dnum - 60 * 60 * hnum - 60 * mnum;
+    snum = Math.round(seconds);
+    if (String(snum).length == 1) {
+      snum = "0" + snum;
+    }
+  }
+
+  // 更新网页中显示的网站运行时间
+  function updateHtml() {
+    const footer = document.getElementById("footer");
+    if (!footer) return
+    let currentTimeHtml = "";
+    if (nowHour < 18 && nowHour >= 9) {
+      // 如果是上班时间，默认就是"安知鱼-上班摸鱼中.svg"图片，不需要更改
+      currentTimeHtml = `本站居然运行了 ${dnum} 天<span id='runtime'> ${hnum} 小时 ${mnum} 分 ${snum} 秒 </span><i class='anzhiyufont anzhiyu-icon-heartbeat' style='color:red'></i>`;
+    } else {
+      // 如果是下班时间，插入"安知鱼-下班啦.svg"图片
+      let img = document.querySelector("#workboard .workSituationImg");
+      if (img != null) {
+        img.src = "https://img01.anheyu.com/useruploads/128/2023/06/03/647b2d1e1fa01.webp";
+        img.title = "下课了就该开开心心的玩耍，嘿嘿~";
+        img.alt = "下课了就该开开心心的玩耍，嘿嘿~";
+      }
+
+      currentTimeHtml = `本站居然运行了 ${dnum} 天<span id='runtime'> ${hnum} 小时 ${mnum} 分 ${snum} 秒 </span><i class='anzhiyufont anzhiyu-icon-heartbeat' style='color:red'></i>`;
+    }
+
+    if (document.getElementById("runtimeTextTip")) {
+      document.getElementById("runtimeTextTip").innerHTML = currentTimeHtml;
+    }
+  }
+
+  setInterval(() => {
+    updateTime();
+    updateHtml();
+  }, 1000);
+})();</script><script src="https://cdn.cbd.int/algoliasearch@4.18.0/dist/algoliasearch-lite.umd.js"></script><script src="https://cdn.cbd.int/instantsearch.js@4.56.5/dist/instantsearch.production.min.js"></script><script src="/js/search/algolia.js"></script><div class="js-pjax"><script>(() => {
+  const init = () => {
+    twikoo.init(Object.assign({
+      el: '#twikoo-wrap',
+      envId: 'https://twikoos.luomengguo.top/',
+      region: 'ap-shanghai',
+      onCommentLoaded: () => {
+        anzhiyu.loadLightbox(document.querySelectorAll('#twikoo .tk-content img:not(.tk-owo-emotion)'))
+      }
+    }, [{"card_post_count":true}]))
+  }
+
+  const loadTwikoo = () => {
+    if (typeof twikoo === 'object') setTimeout(runFn,0)
+    else getScript('https://cdn.cbd.int/twikoo@1.6.25/dist/twikoo.all.min.js').then(runFn)
+  }
+
+  const getCount = () => {
+    const countELement = document.getElementById('twikoo-count')
+    if(!countELement) return
+    twikoo.getCommentsCount({
+      envId: 'https://twikoos.luomengguo.top/',
+      region: 'ap-shanghai',
+      urls: [window.location.pathname],
+      includeReply: false
+    }).then(res => {
+      countELement.textContent = res[0].count
+    }).catch(err => {
+      console.error(err)
+    })
+  }
+
+  const runFn = () => {
+    init();
+    GLOBAL_CONFIG_SITE.isPost && getCount()
+  }
+
+  if ('Twikoo' === 'Twikoo' || !true) {
+    if (true) anzhiyu.loadComment(document.getElementById('twikoo-wrap'), loadTwikoo)
+    else {
+      loadTwikoo()
+    }
+  } else {
+    window.loadOtherComment = loadTwikoo
+  }
+})()</script><input type="hidden" name="page-type" id="page-type" value="post"></div><script>window.addEventListener('load', () => {
+  const changeContent = (content) => {
+    if (content === '') return content
+
+    content = content.replace(/<img.*?src="(.*?)"?[^\>]+>/ig, '[图片]') // replace image link
+    content = content.replace(/<a[^>]+?href=["']?([^"']+)["']?[^>]*>([^<]+)<\/a>/gi, '[链接]') // replace url
+    content = content.replace(/<pre><code>.*?<\/pre>/gi, '[代码]') // replace code
+    content = content.replace(/<[^>]+>/g,"") // remove html tag
+
+    if (content.length > 150) {
+      content = content.substring(0,150) + '...'
+    }
+    return content
+  }
+
+  const getComment = () => {
+    const runTwikoo = () => {
+      twikoo.getRecentComments({
+        envId: 'https://twikoos.luomengguo.top/',
+        region: 'ap-shanghai',
+        pageSize: 6,
+        includeReply: true
+      }).then(function (res) {
+        const twikooArray = res.map(e => {
+          return {
+            'content': changeContent(e.comment),
+            'avatar': e.avatar,
+            'nick': e.nick,
+            'url': e.url + '#' + e.id,
+            'date': new Date(e.created).toISOString()
+          }
+        })
+
+        saveToLocal.set('twikoo-newest-comments', JSON.stringify(twikooArray), 10/(60*24))
+        generateHtml(twikooArray)
+      }).catch(function (err) {
+        const $dom = document.querySelector('#card-newest-comments .aside-list')
+        $dom.textContent= "无法获取评论，请确认相关配置是否正确"
+      })
+    }
+
+    if (typeof twikoo === 'object') {
+      runTwikoo()
+    } else {
+      getScript('https://cdn.cbd.int/twikoo@1.6.25/dist/twikoo.all.min.js').then(runTwikoo)
+    }
+  }
+
+  const generateHtml = array => {
+    let result = ''
+
+    if (array.length) {
+      for (let i = 0; i < array.length; i++) {
+        result += '<div class=\'aside-list-item\'>'
+
+        if (true) {
+          const name = 'data-lazy-src'
+          result += `<a href='${array[i].url}' class='thumbnail'><img ${name}='${array[i].avatar}' alt='${array[i].nick}'><div class='name'><span>${array[i].nick} </span></div></a>`
+        }
+        
+        result += `<div class='content'>
+        <a class='comment' href='${array[i].url}' title='${array[i].content}'>${array[i].content}</a>
+        <time datetime="${array[i].date}">${anzhiyu.diffDate(array[i].date, true)}</time></div>
+        </div>`
+      }
+    } else {
+      result += '没有评论'
+    }
+
+    let $dom = document.querySelector('#card-newest-comments .aside-list')
+    $dom.innerHTML= result
+    window.lazyLoadInstance && window.lazyLoadInstance.update()
+    window.pjax && window.pjax.refresh($dom)
+  }
+
+  const newestCommentInit = () => {
+    if (document.querySelector('#card-newest-comments .aside-list')) {
+      const data = saveToLocal.get('twikoo-newest-comments')
+      if (data) {
+        generateHtml(JSON.parse(data))
+      } else {
+        getComment()
+      }
+    }
+  }
+
+  newestCommentInit()
+  document.addEventListener('pjax:complete', newestCommentInit)
+})</script><script async data-pjax src="https://npm.elemecdn.com/anzhiyu-theme-static@1.0.1/bubble/bubble.js"></script><script>var visitorMail = "visitor@anheyu.com";
+</script><script async data-pjax src="https://cdn.cbd.int/anzhiyu-theme-static@1.0.0/waterfall/waterfall.js"></script><script src="https://lf3-cdn-tos.bytecdntp.com/cdn/expire-1-M/qrcodejs/1.0.0/qrcode.min.js"></script><script src="/js/anzhiyu/right_click_menu.js"></script><link rel="stylesheet" href="https://cdn.cbd.int/anzhiyu-theme-static@1.1.9/icon/ali_iconfont_css.css"><script async src="https://at.alicdn.com/t/c/font_3683608_szomy8kzwrn.js?spm=a313x.7781069.1998910419.54&amp;file=font_3683608_szomy8kzwrn.js"></script><script async data-pjax src="/js/imgloaded.js?1"></script><script src="/js/newYear.js"></script><link rel="stylesheet" href="https://cdn.cbd.int/anzhiyu-theme-static@1.0.0/aplayer/APlayer.min.css" media="print" onload="this.media='all'"><script src="https://cdn.cbd.int/anzhiyu-blog-static@1.0.1/js/APlayer.min.js"></script><script src="https://cdn.cbd.int/hexo-anzhiyu-music@1.0.1/assets/js/Meting2.min.js"></script><script src="https://cdn.cbd.int/pjax@0.2.8/pjax.min.js"></script><script>let pjaxSelectors = ["meta[property=\"og:image\"]","meta[property=\"og:title\"]","meta[property=\"og:url\"]","meta[property=\"og:type\"]","meta[property=\"og:site_name\"]","meta[property=\"og:description\"]","head > title","#config-diff","#body-wrap","#rightside-config-hide","#rightside-config-show",".js-pjax"]
+var pjax = new Pjax({
+  elements: 'a:not([target="_blank"])',
+  selectors: pjaxSelectors,
+  cacheBust: false,
+  analytics: false,
+  scrollRestoration: false
+})
+
+document.addEventListener('pjax:send', function () {
+  // removeEventListener scroll 
+  anzhiyu.removeGlobalFnEvent('pjax')
+  anzhiyu.removeGlobalFnEvent('themeChange')
+
+  document.getElementById('rightside').classList.remove('rightside-show')
+  
+  if (window.aplayers) {
+    for (let i = 0; i < window.aplayers.length; i++) {
+      if (!window.aplayers[i].options.fixed) {
+        window.aplayers[i].destroy()
+      }
+    }
+  }
+
+  typeof typed === 'object' && typed.destroy()
+
+  //reset readmode
+  const $bodyClassList = document.body.classList
+  $bodyClassList.contains('read-mode') && $bodyClassList.remove('read-mode')
+})
+
+document.addEventListener('pjax:complete', function () {
+  window.refreshFn()
+
+  document.querySelectorAll('script[data-pjax]').forEach(item => {
+    const newScript = document.createElement('script')
+    const content = item.text || item.textContent || item.innerHTML || ""
+    Array.from(item.attributes).forEach(attr => newScript.setAttribute(attr.name, attr.value))
+    newScript.appendChild(document.createTextNode(content))
+    item.parentNode.replaceChild(newScript, item)
+  })
+
+  GLOBAL_CONFIG.islazyload && window.lazyLoadInstance.update()
+
+  typeof panguInit === 'function' && panguInit()
+
+  // google analytics
+  typeof gtag === 'function' && gtag('config', '', {'page_path': window.location.pathname});
+
+  // baidu analytics
+  typeof _hmt === 'object' && _hmt.push(['_trackPageview',window.location.pathname]);
+
+  typeof loadMeting === 'function' && document.getElementsByClassName('aplayer').length && loadMeting()
+
+  // prismjs
+  typeof Prism === 'object' && Prism.highlightAll()
+})
+
+document.addEventListener('pjax:error', e => {
+  if (e.request.status === 404) {
+    pjax.loadUrl('/404.html')
+  }
+})</script><script async data-pjax src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script><script charset="UTF-8" src="https://cdn.cbd.int/anzhiyu-theme-static@1.1.5/accesskey/accesskey.js"></script></div><div id="popup-window"><div class="popup-window-title">通知</div><div class="popup-window-divider"></div><div class="popup-window-content"><div class="popup-tip">你好呀</div><div class="popup-link"><i class="anzhiyufont anzhiyu-icon-arrow-circle-right"></i></div></div></div></body></html>
